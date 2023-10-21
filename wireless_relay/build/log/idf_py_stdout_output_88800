@@ -1,0 +1,64 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader/esp-idf/esptool_py && /home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/boony/Documents/srcs/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader/bootloader.bin
+Bootloader binary size 0x68a0 bytes. 0x760 bytes (7%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/relay.cpp.obj
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable blink.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.6.2
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/blink.bin
+[9/10] cd /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esptool_py && /home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/boony/Documents/srcs/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/partition_table/partition-table.bin /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/blink.bin
+blink.bin binary size 0x6f770 bytes. Smallest app partition is 0x100000 bytes. 0x90890 bytes (56%) free.
+[9/10] cd /home/boony/Documents/srcs/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/boony/Documents/srcs/esp-idf -D "SERIAL_TOOL=/home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/boony/Documents/srcs/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build -P /home/boony/Documents/srcs/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 blink.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.6.2
+Serial port /dev/ttyUSB0
+Connecting......
+Chip is ESP32-D0WDQ6 (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 80:7d:3a:fc:86:b0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0007ffff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26784 bytes to 16820...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000767d... (100 %)
+Wrote 26784 bytes (16820 compressed) at 0x00001000 in 0.8 seconds (effective 260.4 kbit/s)...
+Hash of data verified.
+Compressed 456560 bytes to 215905...
+Writing at 0x00010000... (7 %)
+Writing at 0x0001b734... (14 %)
+Writing at 0x0002ea18... (21 %)
+Writing at 0x00034325... (28 %)
+Writing at 0x0003a0e2... (35 %)
+Writing at 0x0004196a... (42 %)
+Writing at 0x0004ac2f... (50 %)
+Writing at 0x00052c53... (57 %)
+Writing at 0x0005a285... (64 %)
+Writing at 0x000610fb... (71 %)
+Writing at 0x00068cb8... (78 %)
+Writing at 0x00071ab4... (85 %)
+Writing at 0x00078968... (92 %)
+Writing at 0x0007e4f5... (100 %)
+Wrote 456560 bytes (215905 compressed) at 0x00010000 in 5.4 seconds (effective 673.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 405.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

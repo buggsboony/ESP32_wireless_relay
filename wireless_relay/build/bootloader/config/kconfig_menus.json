@@ -153,6 +153,16 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "SOC_EFUSE_SUPPORTED",
+        "name": "SOC_EFUSE_SUPPORTED",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "SOC_EMAC_SUPPORTED",
         "name": "SOC_EMAC_SUPPORTED",
         "range": null,
@@ -355,6 +365,16 @@
         "help": null,
         "id": "SOC_ULP_FSM_SUPPORTED",
         "name": "SOC_ULP_FSM_SUPPORTED",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "SOC_CLK_TREE_SUPPORTED",
+        "name": "SOC_CLK_TREE_SUPPORTED",
         "range": null,
         "title": null,
         "type": "bool"
@@ -573,8 +593,28 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "SOC_ADC_SHARED_POWER",
+        "name": "SOC_ADC_SHARED_POWER",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "SOC_SHARED_IDCACHE_SUPPORTED",
         "name": "SOC_SHARED_IDCACHE_SUPPORTED",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "SOC_IDCACHE_PER_CORE",
+        "name": "SOC_IDCACHE_PER_CORE",
         "range": null,
         "title": null,
         "type": "bool"
@@ -755,6 +795,16 @@
         "help": null,
         "id": "SOC_I2C_SUPPORT_APB",
         "name": "SOC_I2C_SUPPORT_APB",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "SOC_I2C_STOP_INDEPENDENT",
+        "name": "SOC_I2C_STOP_INDEPENDENT",
         "range": null,
         "title": null,
         "type": "bool"
@@ -1703,6 +1753,16 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "SOC_SHA_ENDIANNESS_BE",
+        "name": "SOC_SHA_ENDIANNESS_BE",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "SOC_SHA_SUPPORT_SHA1",
         "name": "SOC_SHA_SUPPORT_SHA1",
         "range": null,
@@ -1963,46 +2023,6 @@
         "children": [],
         "depends_on": null,
         "help": null,
-        "id": "SOC_APLL_MULTIPLIER_OUT_MIN_HZ",
-        "name": "SOC_APLL_MULTIPLIER_OUT_MIN_HZ",
-        "range": null,
-        "title": null,
-        "type": "int"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
-        "id": "SOC_APLL_MULTIPLIER_OUT_MAX_HZ",
-        "name": "SOC_APLL_MULTIPLIER_OUT_MAX_HZ",
-        "range": null,
-        "title": null,
-        "type": "int"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
-        "id": "SOC_APLL_MIN_HZ",
-        "name": "SOC_APLL_MIN_HZ",
-        "range": null,
-        "title": null,
-        "type": "int"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
-        "id": "SOC_APLL_MAX_HZ",
-        "name": "SOC_APLL_MAX_HZ",
-        "range": null,
-        "title": null,
-        "type": "int"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
         "id": "SOC_CLK_RC_FAST_D256_SUPPORTED",
         "name": "SOC_CLK_RC_FAST_D256_SUPPORTED",
         "range": null,
@@ -2173,6 +2193,16 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "SOC_PHY_COMBO_MODULE",
+        "name": "SOC_PHY_COMBO_MODULE",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "IDF_CMAKE",
         "name": "IDF_CMAKE",
         "range": null,
@@ -2182,9 +2212,19 @@
     {
         "children": [],
         "depends_on": null,
-        "help": null,
+        "help": "- This option is for internal use only.\n- Enabling this option will help enable all FPGA support so as to\n  run ESP-IDF on an FPGA. This can help reproduce some issues that\n  only happens on FPGA condition, or when you have to burn some\n  efuses multiple times.",
         "id": "IDF_ENV_FPGA",
         "name": "IDF_ENV_FPGA",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": "- This option is ONLY used when doing new chip bringup.\n- This option will only enable necessary hw / sw settings for running\n  a hello_world application.",
+        "id": "IDF_ENV_BRINGUP",
+        "name": "IDF_ENV_BRINGUP",
         "range": null,
         "title": null,
         "type": "bool"
@@ -2255,6 +2295,16 @@
         "help": null,
         "id": "IDF_TARGET",
         "name": "IDF_TARGET",
+        "range": null,
+        "title": null,
+        "type": "string"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "IDF_INIT_VERSION",
+        "name": "IDF_INIT_VERSION",
         "range": null,
         "title": null,
         "type": "string"
@@ -3021,7 +3071,7 @@
             },
             {
                 "children": [],
-                "depends_on": null,
+                "depends_on": "!IDF_ENV_BRINGUP",
                 "help": "Perform the startup flow recommended by XMC. Please consult XMC for the details of this flow.\nXMC chips will be forbidden to be used, when this option is disabled.\n\nDON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU ARE DOING.",
                 "id": "BOOTLOADER_FLASH_XMC_SUPPORT",
                 "name": "BOOTLOADER_FLASH_XMC_SUPPORT",
@@ -3331,8 +3381,8 @@
             },
             {
                 "children": [],
-                "depends_on": "SECURE_SIGNED_APPS && !SECURE_BOOT_BUILD_SIGNED_BINARIES && !SECURE_SIGNED_APPS_RSA_SCHEME",
-                "help": "Path to a public key file used to verify signed images.\nSecure Boot V1: This ECDSA public key is compiled into the bootloader and/or\napp, to verify app images.\nSecure Boot V2: This RSA public key is compiled into the signature block at\nthe end of the bootloader/app.\n\nKey file is in raw binary format, and can be extracted from a\nPEM formatted private key using the espsecure.py\nextract_public_key command.\n\nRefer to the Secure Boot section of the ESP-IDF Programmer's Guide for this version before enabling.",
+                "depends_on": "SECURE_SIGNED_APPS && SECURE_SIGNED_APPS_ECDSA_SCHEME && !SECURE_BOOT_BUILD_SIGNED_BINARIES",
+                "help": "Path to a public key file used to verify signed images.\nSecure Boot V1: This ECDSA public key is compiled into the bootloader and/or\napp, to verify app images.\n\nKey file is in raw binary format, and can be extracted from a\nPEM formatted private key using the espsecure.py\nextract_public_key command.\n\nRefer to the Secure Boot section of the ESP-IDF Programmer's Guide for this version before enabling.",
                 "id": "SECURE_BOOT_VERIFICATION_KEY",
                 "name": "SECURE_BOOT_VERIFICATION_KEY",
                 "range": null,
@@ -4779,7 +4829,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_RT_LIB>",
+                        "depends_on": "!IDF_TARGET_LINUX && <choice COMPILER_RT_LIB>",
                         "help": null,
                         "id": "COMPILER_RT_LIB_GCCLIB",
                         "name": "COMPILER_RT_LIB_GCCLIB",
@@ -4789,17 +4839,27 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TOOLCHAIN_CLANG && <choice COMPILER_RT_LIB>",
+                        "depends_on": "IDF_TOOLCHAIN_CLANG && !IDF_TARGET_LINUX && <choice COMPILER_RT_LIB>",
                         "help": null,
                         "id": "COMPILER_RT_LIB_CLANGRT",
                         "name": "COMPILER_RT_LIB_CLANGRT",
                         "range": null,
                         "title": "libclang_rt",
                         "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_LINUX && <choice COMPILER_RT_LIB>",
+                        "help": null,
+                        "id": "COMPILER_RT_LIB_HOST",
+                        "name": "COMPILER_RT_LIB_HOST",
+                        "range": null,
+                        "title": "Host",
+                        "type": "bool"
                     }
                 ],
                 "depends_on": null,
-                "help": "Select runtime library to be used by compiler.\n- GCC toolchain supports libgcc only.\n- Clang allows to choose between libgcc or libclang_rt.",
+                "help": "Select runtime library to be used by compiler.\n- GCC toolchain supports libgcc only.\n- Clang allows to choose between libgcc or libclang_rt.\n- For host builds (\"linux\" target), uses the default library.",
                 "id": "compiler-options-compiler-runtime-library",
                 "name": "COMPILER_RT_LIB",
                 "title": "Compiler runtime library",
@@ -5253,6 +5313,36 @@
                             },
                             {
                                 "children": [],
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !ESP_SLEEP_POWER_DOWN_FLASH",
+                                "help": "All IOs will be set to isolate(floating) state by default during sleep.\nSince the power supply of SPI Flash is not lost during lightsleep, if its CS pin is recognized as\nlow level(selected state) in the floating state, there will be a large current leakage, and the\ndata in Flash may be corrupted by random signals on other SPI pins.\nSelect this option will set the CS pin of Flash to PULL-UP state during sleep, but this will\nincrease the sleep current about 10 uA.\nIf you are developing with esp32xx modules, you must select this option, but if you are developing\nwith chips, you can also pull up the CS pin of SPI Flash in the external circuit to save power\nconsumption caused by internal pull-up during sleep.\n(!!! Don't deselect this option if you don't have external SPI Flash CS pin pullups.)",
+                                "id": "ESP_SLEEP_FLASH_LEAKAGE_WORKAROUND",
+                                "name": "ESP_SLEEP_FLASH_LEAKAGE_WORKAROUND",
+                                "range": null,
+                                "title": "Pull-up Flash CS pin in light sleep",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "SPIRAM",
+                                "help": "All IOs will be set to isolate(floating) state by default during sleep.\nSince the power supply of PSRAM is not lost during lightsleep, if its CS pin is recognized as\nlow level(selected state) in the floating state, there will be a large current leakage, and the\ndata in PSRAM may be corrupted by random signals on other SPI pins.\nSelect this option will set the CS pin of PSRAM to PULL-UP state during sleep, but this will\nincrease the sleep current about 10 uA.\nIf you are developing with esp32xx modules, you must select this option, but if you are developing\nwith chips, you can also pull up the CS pin of PSRAM in the external circuit to save power\nconsumption caused by internal pull-up during sleep.\n(!!! Don't deselect this option if you don't have external PSRAM CS pin pullups.)",
+                                "id": "ESP_SLEEP_PSRAM_LEAKAGE_WORKAROUND",
+                                "name": "ESP_SLEEP_PSRAM_LEAKAGE_WORKAROUND",
+                                "range": null,
+                                "title": "Pull-up PSRAM CS pin in light sleep",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "!ESP_SLEEP_POWER_DOWN_FLASH && (ESP_SLEEP_PSRAM_LEAKAGE_WORKAROUND || ESP_SLEEP_FLASH_LEAKAGE_WORKAROUND)",
+                                "help": "To reduce leakage current, some types of SPI Flash/RAM only need to pull up the CS pin\nduring light sleep. But there are also some kinds of SPI Flash/RAM that need to pull up\nall pins. It depends on the SPI Flash/RAM chip used.",
+                                "id": "ESP_SLEEP_MSPI_NEED_ALL_IO_PU",
+                                "name": "ESP_SLEEP_MSPI_NEED_ALL_IO_PU",
+                                "range": null,
+                                "title": "Pull-up all SPI pins in light sleep",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
                                 "depends_on": null,
                                 "help": null,
                                 "id": "ESP_SLEEP_RTC_BUS_ISO_WORKAROUND",
@@ -5264,41 +5354,11 @@
                             {
                                 "children": [],
                                 "depends_on": null,
-                                "help": "esp32c2, esp32c3 and esp32s3 will reset at wake-up if GPIO is received a small electrostatic\npulse during light sleep, with specific condition\n\n- GPIO needs to be configured as input-mode only\n- The pin receives a small electrostatic pulse, and reset occurs when the pulse\n  voltage is higher than 6 V\n\nFor GPIO set to input mode only, it is not a good practice to leave it open/floating,\nThe hardware design needs to controlled it with determined supply or ground voltage\nis necessary.\n\nThis option provides a software workaround for this issue. Configure to isolate all\nGPIO pins in sleep state.",
+                                "help": "esp32c2, esp32c3, esp32s3, esp32c6 and esp32h2 will reset at wake-up if GPIO is received\na small electrostatic pulse during light sleep, with specific condition\n\n- GPIO needs to be configured as input-mode only\n- The pin receives a small electrostatic pulse, and reset occurs when the pulse\n  voltage is higher than 6 V\n\nFor GPIO set to input mode only, it is not a good practice to leave it open/floating,\nThe hardware design needs to controlled it with determined supply or ground voltage\nis necessary.\n\nThis option provides a software workaround for this issue. Configure to isolate all\nGPIO pins in sleep state.",
                                 "id": "ESP_SLEEP_GPIO_RESET_WORKAROUND",
                                 "name": "ESP_SLEEP_GPIO_RESET_WORKAROUND",
                                 "range": null,
                                 "title": "light sleep GPIO reset workaround",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "SPIRAM",
-                                "help": "When the CS pin of SPIRAM is not pulled up, the sleep current will\nincrease during light sleep. If the CS pin of SPIRAM has an external\npull-up, you do not need to select this option, otherwise, you\nshould enable this option.",
-                                "id": "ESP_SLEEP_PSRAM_LEAKAGE_WORKAROUND",
-                                "name": "ESP_SLEEP_PSRAM_LEAKAGE_WORKAROUND",
-                                "range": null,
-                                "title": "PSRAM leakage current workaround in light sleep",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
-                                "help": "When the CS pin of Flash is not pulled up, the sleep current will\nincrease during light sleep. If the CS pin of Flash has an external\npull-up, you do not need to select this option, otherwise, you\nshould enable this option.",
-                                "id": "ESP_SLEEP_FLASH_LEAKAGE_WORKAROUND",
-                                "name": "ESP_SLEEP_FLASH_LEAKAGE_WORKAROUND",
-                                "range": null,
-                                "title": "Flash leakage current workaround in light sleep",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "ESP_SLEEP_PSRAM_LEAKAGE_WORKAROUND || ESP_SLEEP_FLASH_LEAKAGE_WORKAROUND",
-                                "help": "To reduce leakage current, some types of SPI Flash/RAM only need to pull up the CS pin\nduring light sleep. But there are also some kinds of SPI Flash/RAM that need to pull up\nall pins. It depends on the SPI Flash/RAM chip used.",
-                                "id": "ESP_SLEEP_MSPI_NEED_ALL_IO_PU",
-                                "name": "ESP_SLEEP_MSPI_NEED_ALL_IO_PU",
-                                "range": null,
-                                "title": "All pins of mspi need pull up",
                                 "type": "bool"
                             },
                             {
@@ -5313,6 +5373,46 @@
                                 ],
                                 "title": "Extra delay in deep sleep wake stub (in us)",
                                 "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "Enabling it will check the cache safety of the code before the flash power is ready after\nlight sleep wakeup, and check PM_SLP_IRAM_OPT related code cache safety. This option is\nonly for code quality inspection. Enabling it will increase the time overhead of entering\nand exiting sleep. It is not recommended to enable it in the release version.",
+                                "id": "ESP_SLEEP_CACHE_SAFE_ASSERTION",
+                                "name": "ESP_SLEEP_CACHE_SAFE_ASSERTION",
+                                "range": null,
+                                "title": "Check the cache safety of the sleep wakeup code in sleep process",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "Enable esp sleep debug.",
+                                "id": "ESP_SLEEP_DEBUG",
+                                "name": "ESP_SLEEP_DEBUG",
+                                "range": null,
+                                "title": "esp sleep debug",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "When using rtc gpio wakeup source during deepsleep without external pull-up/downs, you may want to\nmake use of the internal ones.",
+                                "id": "ESP_SLEEP_GPIO_ENABLE_INTERNAL_RESISTORS",
+                                "name": "ESP_SLEEP_GPIO_ENABLE_INTERNAL_RESISTORS",
+                                "range": null,
+                                "title": "Allow to enable internal pull-up/downs for the Deep-Sleep wakeup IOs",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "FREERTOS_USE_TICKLESS_IDLE",
+                                "help": "If enabled, it allows user to register sleep event callbacks. It is primarily designed for internal\ndevelopers and customers can use PM_LIGHT_SLEEP_CALLBACKS as an alternative.\n\nNOTE: These callbacks are executed from the IDLE task context hence you cannot have any blocking calls\nin your callbacks.\n\nNOTE: Enabling these callbacks may change sleep duration calculations based on time spent in\ncallback and hence it is highly recommended to keep them as short as possible.",
+                                "id": "ESP_SLEEP_EVENT_CALLBACKS",
+                                "name": "ESP_SLEEP_EVENT_CALLBACKS",
+                                "range": null,
+                                "title": "Enable registration of sleep event callbacks",
+                                "type": "bool"
                             }
                         ],
                         "depends_on": null,
@@ -5516,6 +5616,16 @@
                                 "range": null,
                                 "title": "GDMA ISR IRAM-Safe",
                                 "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "SOC_GDMA_SUPPORTED",
+                                "help": "Wether to enable the debug log message for GDMA driver.\nNote that, this option only controls the GDMA driver log, won't affect other drivers.",
+                                "id": "GDMA_ENABLE_DEBUG_LOG",
+                                "name": "GDMA_ENABLE_DEBUG_LOG",
+                                "range": null,
+                                "title": "Enable debug log",
+                                "type": "bool"
                             }
                         ],
                         "depends_on": "SOC_GDMA_SUPPORTED",
@@ -5669,6 +5779,16 @@
                         "id": "component-config-hardware-settings-crypto-dpa-protection",
                         "title": "Crypto DPA Protection",
                         "type": "menu"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "This option is only used for new chip bringup, when\nclock support isn't done yet. So with this option,\nwe use xtal on FPGA as the clock source.",
+                        "id": "ESP_BRINGUP_BYPASS_CPU_CLK_SETTING",
+                        "name": "ESP_BRINGUP_BYPASS_CPU_CLK_SETTING",
+                        "range": null,
+                        "title": null,
+                        "type": "bool"
                     }
                 ],
                 "depends_on": null,
@@ -5868,7 +5988,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_SYSTEM_PANIC>",
+                                "depends_on": "!ESP_SYSTEM_GDBSTUB_RUNTIME && <choice ESP_SYSTEM_PANIC>",
                                 "help": "Outputs the relevant registers over the serial port and halt the\nprocessor. Needs a manual reset to restart.",
                                 "id": "ESP_SYSTEM_PANIC_PRINT_HALT",
                                 "name": "ESP_SYSTEM_PANIC_PRINT_HALT",
@@ -5878,7 +5998,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_SYSTEM_PANIC>",
+                                "depends_on": "!ESP_SYSTEM_GDBSTUB_RUNTIME && <choice ESP_SYSTEM_PANIC>",
                                 "help": "Outputs the relevant registers over the serial port and immediately\nreset the processor.",
                                 "id": "ESP_SYSTEM_PANIC_PRINT_REBOOT",
                                 "name": "ESP_SYSTEM_PANIC_PRINT_REBOOT",
@@ -5888,7 +6008,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_SYSTEM_PANIC>",
+                                "depends_on": "!ESP_SYSTEM_GDBSTUB_RUNTIME && <choice ESP_SYSTEM_PANIC>",
                                 "help": "Just resets the processor without outputting anything",
                                 "id": "ESP_SYSTEM_PANIC_SILENT_REBOOT",
                                 "name": "ESP_SYSTEM_PANIC_SILENT_REBOOT",
@@ -5904,16 +6024,6 @@
                                 "name": "ESP_SYSTEM_PANIC_GDBSTUB",
                                 "range": null,
                                 "title": "GDBStub on panic",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "!IDF_TARGET_ESP32C2 && <choice ESP_SYSTEM_PANIC>",
-                                "help": "Invoke gdbstub on the serial port, allowing for gdb to attach to it and to do a debug on runtime.",
-                                "id": "ESP_SYSTEM_GDBSTUB_RUNTIME",
-                                "name": "ESP_SYSTEM_GDBSTUB_RUNTIME",
-                                "range": null,
-                                "title": "GDBStub at runtime",
                                 "type": "bool"
                             }
                         ],
@@ -6524,7 +6634,7 @@
                             {
                                 "children": [],
                                 "depends_on": "IDF_TARGET_ESP32 && <choice ESP_SYSTEM_CHECK_INT_LEVEL>",
-                                "help": "Using level 5 interrupt for Interrupt Watchdog and other system checks.",
+                                "help": "Using level 5 interrupt for Interrupt Watchdog, IPC_ISR and other system checks.",
                                 "id": "ESP_SYSTEM_CHECK_INT_LEVEL_5",
                                 "name": "ESP_SYSTEM_CHECK_INT_LEVEL_5",
                                 "range": null,
@@ -6534,7 +6644,7 @@
                             {
                                 "children": [],
                                 "depends_on": "!BTDM_CTRL_HLI && <choice ESP_SYSTEM_CHECK_INT_LEVEL>",
-                                "help": "Using level 4 interrupt for Interrupt Watchdog and other system checks.",
+                                "help": "Using level 4 interrupt for Interrupt Watchdog, IPC_ISR and other system checks.",
                                 "id": "ESP_SYSTEM_CHECK_INT_LEVEL_4",
                                 "name": "ESP_SYSTEM_CHECK_INT_LEVEL_4",
                                 "range": null,
@@ -6543,7 +6653,7 @@
                             }
                         ],
                         "depends_on": null,
-                        "help": "Interrupt level to use for Interrupt Watchdog and other system checks.",
+                        "help": "Interrupt level to use for Interrupt Watchdog, IPC_ISR and other system checks.",
                         "id": "component-config-esp-system-settings-interrupt-level-to-use-for-interrupt-watchdog-and-other-system-checks",
                         "name": "ESP_SYSTEM_CHECK_INT_LEVEL",
                         "title": "Interrupt level to use for Interrupt Watchdog and other system checks",
@@ -6697,6 +6807,16 @@
                         "range": null,
                         "title": null,
                         "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_ASSIST_DEBUG_SUPPORTED",
+                        "help": "This config allows to trigger a panic interrupt when Stack Pointer register goes out of allocated stack\nmemory bounds.",
+                        "id": "ESP_SYSTEM_HW_STACK_GUARD",
+                        "name": "ESP_SYSTEM_HW_STACK_GUARD",
+                        "range": null,
+                        "title": "Hardware stack guard",
+                        "type": "bool"
                     }
                 ],
                 "depends_on": null,
@@ -6732,7 +6852,7 @@
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "The IPC ISR feature is similar to the IPC feature except that the callback function is executed in the\ncontext of a High Priority Interrupt. The IPC ISR feature is itended for low latency execution of simple\ncallbacks written in assembly on another CPU. Due to being run in a High Priority Interrupt, the assembly\ncallbacks must be written with particular restrictions (see \"IPC\" and \"High-Level Interrupt\" docs for more\ndetails).",
+                        "help": "The IPC ISR feature is similar to the IPC feature except that the callback function is executed in the\ncontext of a High Priority Interrupt. The IPC ISR feature is intended for low latency execution of simple\ncallbacks written in assembly on another CPU. Due to being run in a High Priority Interrupt, the assembly\ncallbacks must be written with particular restrictions (see \"IPC\" and \"High-Level Interrupt\" docs for more\ndetails).",
                         "id": "ESP_IPC_ISR_ENABLE",
                         "name": "ESP_IPC_ISR_ENABLE",
                         "range": null,
@@ -6751,17 +6871,17 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "IDF_EXPERIMENTAL_FEATURES",
-                                "help": "Hidden option for development/testing purposes to enable building with the v10.5.1 kernel",
+                                "depends_on": null,
+                                "help": "This option enables building for FreeRTOS v10.5.1 kernel.\n\nNote: The v10.5.1 kernel is still in BETA, thus is not production ready.",
                                 "id": "FREERTOS_USE_KERNEL_10_5_1",
                                 "name": "FREERTOS_USE_KERNEL_10_5_1",
                                 "range": null,
-                                "title": "Use v10.5.1 Kernel (EXPERIMENTAL)",
+                                "title": "Use v10.5.1 Kernel (BETA)",
                                 "type": "bool"
                             },
                             {
                                 "children": [],
-                                "depends_on": "!FREERTOS_USE_KERNEL_10_5_1",
+                                "depends_on": "!FREERTOS_USE_KERNEL_10_5_1 && !IDF_TARGET_ESP32P4",
                                 "help": "Amazon has released an SMP version of the FreeRTOS Kernel which can be found via the following link:\nhttps://github.com/FreeRTOS/FreeRTOS-Kernel/tree/smp\n\nIDF has added an experimental port of this SMP kernel located in\ncomponents/freertos/FreeRTOS-Kernel-SMP. Enabling this option will cause IDF to use the Amazon SMP\nkernel. Note that THIS FEATURE IS UNDER ACTIVE DEVELOPMENT, users use this at their own risk.\n\nLeaving this option disabled will mean the IDF FreeRTOS kernel is used instead, which is located in:\ncomponents/freertos/FreeRTOS-Kernel. Both kernel versions are SMP capable, but differ in\ntheir implementation and features.",
                                 "id": "FREERTOS_SMP",
                                 "name": "FREERTOS_SMP",
@@ -6920,6 +7040,16 @@
                                 "range": null,
                                 "title": "configENABLE_BACKWARD_COMPATIBILITY",
                                 "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "Sets the timer task's name (see configTIMER_SERVICE_TASK_NAME documentation for more details).",
+                                "id": "FREERTOS_TIMER_SERVICE_TASK_NAME",
+                                "name": "FREERTOS_TIMER_SERVICE_TASK_NAME",
+                                "range": null,
+                                "title": "configTIMER_SERVICE_TASK_NAME",
+                                "type": "string"
                             },
                             {
                                 "children": [],
@@ -7089,12 +7219,22 @@
                             },
                             {
                                 "children": [],
+                                "depends_on": "!FREERTOS_ENABLE_STATIC_TASK_CLEAN_UP",
+                                "help": "Enable this option to make FreeRTOS call a user provided hook function right before it deletes a task\n(i.e., frees/releases a dynamically/statically allocated task's memory). This is useful if users want\nto know when a task is actually deleted (in case the task's deletion is delegated to the IDLE task).\n\nIf this config option is enabled, users must define a ``void vTaskPreDeletionHook( void * pxTCB )``\nhook function in their application.",
+                                "id": "FREERTOS_TASK_PRE_DELETION_HOOK",
+                                "name": "FREERTOS_TASK_PRE_DELETION_HOOK",
+                                "range": null,
+                                "title": "Enable task pre-deletion hook",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
                                 "depends_on": null,
-                                "help": "Enable this option to make FreeRTOS call the static task clean up hook when a task is deleted.\n\nNote: Users will need to provide a ``void vPortCleanUpTCB ( void *pxTCB )`` callback",
+                                "help": "THIS OPTION IS DEPRECATED. Use FREERTOS_TASK_PRE_DELETION_HOOK instead.\n\nEnable this option to make FreeRTOS call the static task clean up hook when a task is deleted.\n\nNote: Users will need to provide a ``void vPortCleanUpTCB ( void *pxTCB )`` callback",
                                 "id": "FREERTOS_ENABLE_STATIC_TASK_CLEAN_UP",
                                 "name": "FREERTOS_ENABLE_STATIC_TASK_CLEAN_UP",
                                 "range": null,
-                                "title": "Enable static task clean up hook",
+                                "title": "Enable static task clean up hook (DEPRECATED)",
                                 "type": "bool"
                             },
                             {
@@ -7272,32 +7412,12 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "FREERTOS_ENABLE_TASK_SNAPSHOT && !ESP_PANIC_HANDLER_IRAM",
-                                "help": "When enabled, the functions related to snapshots, such as vTaskGetSnapshot or uxTaskGetSnapshotAll,\nwill be placed in flash. Note that if enabled, these functions cannot be called when cache is disabled.",
-                                "id": "FREERTOS_PLACE_SNAPSHOT_FUNS_INTO_FLASH",
-                                "name": "FREERTOS_PLACE_SNAPSHOT_FUNS_INTO_FLASH",
-                                "range": null,
-                                "title": "Place task snapshot functions into flash",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
                                 "depends_on": null,
                                 "help": "If enabled, context of port*_CRITICAL calls (ISR or Non-ISR) would be checked to be in compliance with\nVanilla FreeRTOS. e.g Calling port*_CRITICAL from ISR context would cause assert failure",
                                 "id": "FREERTOS_CHECK_PORT_CRITICAL_COMPLIANCE",
                                 "name": "FREERTOS_CHECK_PORT_CRITICAL_COMPLIANCE",
                                 "range": null,
                                 "title": "Tests compliance with Vanilla FreeRTOS port*_CRITICAL calls",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "When enabled, the functions related to snapshots, such as vTaskGetSnapshot or uxTaskGetSnapshotAll, are\ncompiled and linked. Task snapshots are used by Task Watchdog (TWDT), GDB Stub and Core dump.",
-                                "id": "FREERTOS_ENABLE_TASK_SNAPSHOT",
-                                "name": "FREERTOS_ENABLE_TASK_SNAPSHOT",
-                                "range": null,
-                                "title": "Enable task snapshot functions",
                                 "type": "bool"
                             }
                         ],
@@ -7342,6 +7462,26 @@
                         "help": "Hidden option, gets selected by CONFIG_ESP_DEBUG_OCDAWARE",
                         "id": "FREERTOS_DEBUG_OCDAWARE",
                         "name": "FREERTOS_DEBUG_OCDAWARE",
+                        "range": null,
+                        "title": null,
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "FREERTOS_ENABLE_TASK_SNAPSHOT",
+                        "name": "FREERTOS_ENABLE_TASK_SNAPSHOT",
+                        "range": null,
+                        "title": null,
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "!ESP_PANIC_HANDLER_IRAM",
+                        "help": null,
+                        "id": "FREERTOS_PLACE_SNAPSHOT_FUNS_INTO_FLASH",
+                        "name": "FREERTOS_PLACE_SNAPSHOT_FUNS_INTO_FLASH",
                         "range": null,
                         "title": null,
                         "type": "bool"
@@ -8139,7 +8279,7 @@
                     {
                         "children": [],
                         "depends_on": "SPI_FLASH_SUSPEND_QVL_SUPPORTED && !SPI_FLASH_ROM_IMPL && !APP_BUILD_TYPE_PURE_RAM_APP",
-                        "help": "This option is default n because it can't be used in every situation. You need to\nevaluate this feature through suspend part in `SPI Flash API` document.\n\nCAUTION: If you want to OTA to an app with this feature turned on, please make\nsure the bootloader has the support for it. (later than IDF v4.3)\n\nAuto-suspend feature only supported by specific flash chips.\nIf you are using an official module, please contact Espressif Business support.\nAlso reading auto suspend part in `SPI Flash API` document before you enable this function.",
+                        "help": "This option is disabled by default because it is supported only\nfor specific flash chips and for specific Espressif chips.\nTo evaluate if you can use this feature refer to\n`Optional Features for Flash` > `Auto Suspend & Resume` of the `ESP-IDF Programming Guide`.\n\nCAUTION: If you want to OTA to an app with this feature turned on, please make\nsure the bootloader has the support for it. (later than IDF v4.3)\n\nIf you are using an official Espressif module, please contact Espressif Business support\nto check if the module has the flash that support this feature installed.\nAlso refer to `Concurrency Constraints for Flash on SPI1` > `Flash Auto Suspend Feature`\nbefore enabling this option.",
                         "id": "SPI_FLASH_AUTO_SUSPEND",
                         "name": "SPI_FLASH_AUTO_SUSPEND",
                         "range": null,

@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "bootloader",
-    "project_version":    "v5.2-dev-1128-g03d4fa2869",
+    "project_version":    "v5.2-dev-3318-g8fc8f3f479",
     "project_path":       "/home/boony/Documents/srcs/esp-idf/components/bootloader/subproject",
     "idf_path":           "/home/boony/Documents/srcs/esp-idf",
     "build_dir":          "/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader",
@@ -11,7 +11,7 @@
     "app_elf":            "bootloader.elf",
     "app_bin":            "bootloader.bin",
     "build_type":         "flash_app",
-    "git_revision":       "v5.2-dev-1128-g03d4fa2869",
+    "git_revision":       "v5.2-dev-3318-g8fc8f3f479",
     "target":             "esp32",
     "rev":                "0",
     "min_rev":            "0",
@@ -205,7 +205,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader/esp-idf/hal/libhal.a",
-            "sources": [ "/home/boony/Documents/srcs/esp-idf/components/hal/mpu_hal.c", "/home/boony/Documents/srcs/esp-idf/components/hal/efuse_hal.c", "/home/boony/Documents/srcs/esp-idf/components/hal/esp32/efuse_hal.c", "/home/boony/Documents/srcs/esp-idf/components/hal/wdt_hal_iram.c", "/home/boony/Documents/srcs/esp-idf/components/hal/mmu_hal.c" ],
+            "sources": [ "/home/boony/Documents/srcs/esp-idf/components/hal/mpu_hal.c", "/home/boony/Documents/srcs/esp-idf/components/hal/efuse_hal.c", "/home/boony/Documents/srcs/esp-idf/components/hal/hal_utils.c", "/home/boony/Documents/srcs/esp-idf/components/hal/esp32/efuse_hal.c", "/home/boony/Documents/srcs/esp-idf/components/hal/wdt_hal_iram.c", "/home/boony/Documents/srcs/esp-idf/components/hal/mmu_hal.c", "/home/boony/Documents/srcs/esp-idf/components/hal/esp32/cache_hal_esp32.c" ],
             "include_dirs": [ "esp32/include", "include", "platform_port/include" ]
         },
         "log": {

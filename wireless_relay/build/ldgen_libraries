@@ -1,6 +1,7 @@
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/xtensa/libxtensa.a
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_ringbuf/libesp_ringbuf.a
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/efuse/libefuse.a
+/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/libesp_mm.a
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/driver/libdriver.a
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_pm/libesp_pm.a
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/mbedtls/libmbedtls.a
@@ -9,7 +10,6 @@
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/bootloader_support/libbootloader_support.a
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_partition/libesp_partition.a
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/app_update/libapp_update.a
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/libesp_mm.a
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/spi_flash/libspi_flash.a
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/pthread/libpthread.a
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_system/libesp_system.a

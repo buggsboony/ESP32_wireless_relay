@@ -55,6 +55,13 @@
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/efuse/CMakeFiles/install.dir
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/efuse/CMakeFiles/install/local.dir
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/efuse/CMakeFiles/install/strip.dir
+/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir
+/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/edit_cache.dir
+/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/rebuild_cache.dir
+/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/list_install_components.dir
+/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/install.dir
+/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/install/local.dir
+/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/install/strip.dir
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/driver/CMakeFiles/__idf_driver.dir
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/driver/CMakeFiles/edit_cache.dir
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/driver/CMakeFiles/rebuild_cache.dir
@@ -170,13 +177,6 @@
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/app_update/CMakeFiles/install.dir
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/app_update/CMakeFiles/install/local.dir
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/app_update/CMakeFiles/install/strip.dir
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/edit_cache.dir
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/rebuild_cache.dir
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/list_install_components.dir
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/install.dir
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/install/local.dir
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_mm/CMakeFiles/install/strip.dir
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/spi_flash/CMakeFiles/edit_cache.dir
 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/spi_flash/CMakeFiles/rebuild_cache.dir

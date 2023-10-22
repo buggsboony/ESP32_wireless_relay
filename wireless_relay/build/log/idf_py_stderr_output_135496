@@ -1,0 +1,92 @@
+[0;33m--- esp-idf-monitor 1.3.2 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081806: panic_abort at /home/boony/Documents/srcs/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40089001: esp_system_abort at /home/boony/Documents/srcs/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x40090075: __assert_func at /home/boony/Documents/srcs/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x4010f653: tcpip_send_msg_wait_sem at /home/boony/Documents/srcs/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x4011b669: netconn_apimsg at /home/boony/Documents/srcs/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x4011b6f2: netconn_new_with_proto_and_callback at /home/boony/Documents/srcs/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x4010f4ad: lwip_socket at /home/boony/Documents/srcs/esp-idf/components/lwip/lwip/src/api/sockets.c:1720 (discriminator 4)
+[0m
+[0;33m0x400dd7c8: socket at /home/boony/Documents/srcs/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) httpd_server_init at /home/boony/Documents/srcs/esp-idf/components/esp_http_server/src/httpd_main.c:345
+[0m
+[0;33m0x400dde39: httpd_start at /home/boony/Documents/srcs/esp-idf/components/esp_http_server/src/httpd_main.c:512
+[0m
+[0;33m0x400d6574: start_webserver() at /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/main/relay.cpp:69
+[0m
+[0;33m0x400d6763: app_main at /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/main/relay.cpp:180 (discriminator 13)
+[0m
+[0;33m0x4017c1cb: main_task at /home/boony/Documents/srcs/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40089b65: vPortTaskWrapper at /home/boony/Documents/srcs/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081806: panic_abort at /home/boony/Documents/srcs/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40089001: esp_system_abort at /home/boony/Documents/srcs/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x40090075: __assert_func at /home/boony/Documents/srcs/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x4010f653: tcpip_send_msg_wait_sem at /home/boony/Documents/srcs/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x4011b669: netconn_apimsg at /home/boony/Documents/srcs/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x4011b6f2: netconn_new_with_proto_and_callback at /home/boony/Documents/srcs/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x4010f4ad: lwip_socket at /home/boony/Documents/srcs/esp-idf/components/lwip/lwip/src/api/sockets.c:1720 (discriminator 4)
+[0m
+[0;33m0x400dd7c8: socket at /home/boony/Documents/srcs/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) httpd_server_init at /home/boony/Documents/srcs/esp-idf/components/esp_http_server/src/httpd_main.c:345
+[0m
+[0;33m0x400dde39: httpd_start at /home/boony/Documents/srcs/esp-idf/components/esp_http_server/src/httpd_main.c:512
+[0m
+[0;33m0x400d6574: start_webserver() at /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/main/relay.cpp:69
+[0m
+[0;33m0x400d6763: app_main at /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/main/relay.cpp:180 (discriminator 13)
+[0m
+[0;33m0x4017c1cb: main_task at /home/boony/Documents/srcs/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40089b65: vPortTaskWrapper at /home/boony/Documents/srcs/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081806: panic_abort at /home/boony/Documents/srcs/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40089001: esp_system_abort at /home/boony/Documents/srcs/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x40090075: __assert_func at /home/boony/Documents/srcs/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x4010f653: tcpip_send_msg_wait_sem at /home/boony/Documents/srcs/esp-idf/components/lwip/lwip/src/api/tcpip.c:449 (discriminator 1)
+[0m
+[0;33m0x4011b669: netconn_apimsg at /home/boony/Documents/srcs/esp-idf/components/lwip/lwip/src/api/api_lib.c:131
+[0m
+[0;33m0x4011b6f2: netconn_new_with_proto_and_callback at /home/boony/Documents/srcs/esp-idf/components/lwip/lwip/src/api/api_lib.c:161
+[0m
+[0;33m0x4010f4ad: lwip_socket at /home/boony/Documents/srcs/esp-idf/components/lwip/lwip/src/api/sockets.c:1720 (discriminator 4)
+[0m
+[0;33m0x400dd7c8: socket at /home/boony/Documents/srcs/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) httpd_server_init at /home/boony/Documents/srcs/esp-idf/components/esp_http_server/src/httpd_main.c:345
+[0m
+[0;33m0x400dde39: httpd_start at /home/boony/Documents/srcs/esp-idf/components/esp_http_server/src/httpd_main.c:512
+[0m
+[0;33m0x400d6574: start_webserver() at /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/main/relay.cpp:69
+[0m
+[0;33m0x400d6763: app_main at /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/main/relay.cpp:180 (discriminator 13)
+[0m
+[0;33m0x4017c1cb: main_task at /home/boony/Documents/srcs/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40089b65: vPortTaskWrapper at /home/boony/Documents/srcs/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

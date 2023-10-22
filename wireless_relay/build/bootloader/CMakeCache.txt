@@ -248,6 +248,9 @@ IDF_TARGET:STRING=esp32
 IDF_TOOLCHAIN:STRING=gcc
 
 //No help, variable specified on the command line.
+IGNORE_EXTRA_COMPONENT:UNINITIALIZED=
+
+//No help, variable specified on the command line.
 PROJECT_SOURCE_DIR:UNINITIALIZED=/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay
 
 //No help, variable specified on the command line.

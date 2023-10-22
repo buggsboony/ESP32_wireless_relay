@@ -1,51 +1,5 @@
--- Existing sdkconfig '/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/sdkconfig' renamed to '/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/sdkconfig.old'.
+-- IDF_TARGET is not set, guessed 'esp32' from sdkconfig '/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/sdkconfig'
 -- Found Git: /usr/bin/git (found version "2.41.0") 
--- Initialising new submodule components/bootloader/subproject/components/micro-ecc/micro-ecc...
-Chemin de sous-module 'components/bootloader/subproject/components/micro-ecc/micro-ecc' : '24c60e243580c7868f4334a1ba3123481fe1aa48' extrait
--- Initialising new submodule components/bt/controller/lib_esp32...
-Chemin de sous-module 'components/bt/controller/lib_esp32' : '943b0f24eb6ed390213599e4a9556c66844ef0db' extrait
--- Initialising new submodule components/bt/controller/lib_esp32c2/esp32c2-bt-lib...
-Chemin de sous-module 'components/bt/controller/lib_esp32c2/esp32c2-bt-lib' : '9da8ad3ebd7932ea6f92578fb1337c7df5000ac7' extrait
--- Initialising new submodule components/bt/controller/lib_esp32c3_family...
-Chemin de sous-module 'components/bt/controller/lib_esp32c3_family' : '27af69ccbb02f3b820436f47eaa0b1cd544edfbc' extrait
--- Initialising new submodule components/bt/controller/lib_esp32c6/esp32c6-bt-lib...
-Chemin de sous-module 'components/bt/controller/lib_esp32c6/esp32c6-bt-lib' : '97499655f3148ee273baadb6b48bbb168207d90b' extrait
--- Initialising new submodule components/bt/controller/lib_esp32h2/esp32h2-bt-lib...
-Chemin de sous-module 'components/bt/controller/lib_esp32h2/esp32h2-bt-lib' : 'ff664688f4fedb16c7eafc5bc88a4dacbc3e8ba5' extrait
--- Initialising new submodule components/bt/host/nimble/nimble...
-Chemin de sous-module 'components/bt/host/nimble/nimble' : '48bb80dab7f0e5c6e5a2da09357896edd260b6e4' extrait
--- Initialising new submodule components/cmock/CMock...
-Chemin de sous-module 'components/cmock/CMock' : 'eeecc49ce8af123cf8ad40efdb9673e37b56230f' extrait
-Chemin de sous-module 'components/cmock/CMock/vendor/c_exception' : '71b47be7c950f1bf5f7e5303779fa99a16224bb6' extrait
-Chemin de sous-module 'components/cmock/CMock/vendor/unity' : 'cf949f45ca6d172a177b00da21310607b97bc7a7' extrait
--- Initialising new submodule components/esp_coex/lib...
-Chemin de sous-module 'components/esp_coex/lib' : 'ad378ec993cde453b0c93439aa4dbcd317970ccf' extrait
--- Initialising new submodule components/esp_phy/lib...
-Chemin de sous-module 'components/esp_phy/lib' : 'f1d9b9b5cb63dac81b9027f50f7a46b1d840ce5c' extrait
--- Initialising new submodule components/esp_wifi/lib...
-Chemin de sous-module 'components/esp_wifi/lib' : '174341fbe17d6527f25a1c4e936323b6f3e691e2' extrait
--- Initialising new submodule components/heap/tlsf...
-Chemin de sous-module 'components/heap/tlsf' : '8c9cd0517adf99e363812e9a295dfe3898fdd345' extrait
--- Initialising new submodule components/ieee802154/lib...
-Chemin de sous-module 'components/ieee802154/lib' : '102b03c8095de8a337c293f79dce189be63186f3' extrait
--- Initialising new submodule components/json/cJSON...
-Chemin de sous-module 'components/json/cJSON' : 'cb8693b058ba302f4829ec6d03f609ac6f848546' extrait
--- Initialising new submodule components/lwip/lwip...
-Chemin de sous-module 'components/lwip/lwip' : '5c4f899f8e7b58ef53522b6f832fc940e29bf0b9' extrait
--- Initialising new submodule components/mbedtls/mbedtls...
-Chemin de sous-module 'components/mbedtls/mbedtls' : '727a037da6f9a62a9d3d5def5bd21a2bc9c621c6' extrait
--- Initialising new submodule components/mqtt/esp-mqtt...
-Chemin de sous-module 'components/mqtt/esp-mqtt' : 'e6afdb4025fe018ae0add44e3c45249ea1974774' extrait
--- Initialising new submodule components/openthread/lib...
-Chemin de sous-module 'components/openthread/lib' : '12f563ee490236f7332eb22f568e71c7c1d4a3b7' extrait
--- Initialising new submodule components/openthread/openthread...
-Chemin de sous-module 'components/openthread/openthread' : '4ae691476f07164dee3d12d304a9eb0b4f0ea0a3' extrait
--- Initialising new submodule components/protobuf-c/protobuf-c...
-Chemin de sous-module 'components/protobuf-c/protobuf-c' : 'abc67a11c6db271bedbb9f58be85d6f4e2ea8389' extrait
--- Initialising new submodule components/spiffs/spiffs...
-Chemin de sous-module 'components/spiffs/spiffs' : '0dbb3f71c5f6fae3747a9d935372773762baf852' extrait
--- Initialising new submodule components/unity/unity...
-Chemin de sous-module 'components/unity/unity' : '7d2bf62b7e6afaf38153041a9d53c21aeeca9a25' extrait
 -- The C compiler identification is GNU 12.2.0
 -- The CXX compiler identification is GNU 12.2.0
 -- The ASM compiler identification is GNU
@@ -61,8 +15,6 @@ Chemin de sous-module 'components/unity/unity' : '7d2bf62b7e6afaf38153041a9d53c
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 -- Building ESP-IDF components for target esp32
-Manifest files have changed, solving dependencies.
-...Updating lock file at /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/dependencies.lock
 Processing 2 dependencies:
 [1/2] espressif/led_strip (2.4.3)
 [2/2] idf (5.2.0)
@@ -79,7 +31,7 @@ Processing 2 dependencies:
 -- Found Python3: /home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python (found version "3.11.3") found components: Interpreter 
 -- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
 -- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
--- App "blink" version: d53c05e-dirty
+-- App "blink" version: 1163f8f-dirty
 -- Adding linker script /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esp_system/ld/memory.ld
 -- Adding linker script /home/boony/Documents/srcs/esp-idf/components/esp_system/ld/esp32/sections.ld.in
 -- Adding linker script /home/boony/Documents/srcs/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
@@ -91,6 +43,6 @@ Processing 2 dependencies:
 -- Adding linker script /home/boony/Documents/srcs/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
 -- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump espressif__led_strip esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
 -- Component paths: /home/boony/Documents/srcs/esp-idf/components/app_trace /home/boony/Documents/srcs/esp-idf/components/app_update /home/boony/Documents/srcs/esp-idf/components/bootloader /home/boony/Documents/srcs/esp-idf/components/bootloader_support /home/boony/Documents/srcs/esp-idf/components/bt /home/boony/Documents/srcs/esp-idf/components/cmock /home/boony/Documents/srcs/esp-idf/components/console /home/boony/Documents/srcs/esp-idf/components/cxx /home/boony/Documents/srcs/esp-idf/components/driver /home/boony/Documents/srcs/esp-idf/components/efuse /home/boony/Documents/srcs/esp-idf/components/esp-tls /home/boony/Documents/srcs/esp-idf/components/esp_adc /home/boony/Documents/srcs/esp-idf/components/esp_app_format /home/boony/Documents/srcs/esp-idf/components/esp_bootloader_format /home/boony/Documents/srcs/esp-idf/components/esp_coex /home/boony/Documents/srcs/esp-idf/components/esp_common /home/boony/Documents/srcs/esp-idf/components/esp_eth /home/boony/Documents/srcs/esp-idf/components/esp_event /home/boony/Documents/srcs/esp-idf/components/esp_gdbstub /home/boony/Documents/srcs/esp-idf/components/esp_hid /home/boony/Documents/srcs/esp-idf/components/esp_http_client /home/boony/Documents/srcs/esp-idf/components/esp_http_server /home/boony/Documents/srcs/esp-idf/components/esp_https_ota /home/boony/Documents/srcs/esp-idf/components/esp_https_server /home/boony/Documents/srcs/esp-idf/components/esp_hw_support /home/boony/Documents/srcs/esp-idf/components/esp_lcd /home/boony/Documents/srcs/esp-idf/components/esp_local_ctrl /home/boony/Documents/srcs/esp-idf/components/esp_mm /home/boony/Documents/srcs/esp-idf/components/esp_netif /home/boony/Documents/srcs/esp-idf/components/esp_netif_stack /home/boony/Documents/srcs/esp-idf/components/esp_partition /home/boony/Documents/srcs/esp-idf/components/esp_phy /home/boony/Documents/srcs/esp-idf/components/esp_pm /home/boony/Documents/srcs/esp-idf/components/esp_psram /home/boony/Documents/srcs/esp-idf/components/esp_ringbuf /home/boony/Documents/srcs/esp-idf/components/esp_rom /home/boony/Documents/srcs/esp-idf/components/esp_system /home/boony/Documents/srcs/esp-idf/components/esp_timer /home/boony/Documents/srcs/esp-idf/components/esp_wifi /home/boony/Documents/srcs/esp-idf/components/espcoredump /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/managed_components/espressif__led_strip /home/boony/Documents/srcs/esp-idf/components/esptool_py /home/boony/Documents/srcs/esp-idf/components/fatfs /home/boony/Documents/srcs/esp-idf/components/freertos /home/boony/Documents/srcs/esp-idf/components/hal /home/boony/Documents/srcs/esp-idf/components/heap /home/boony/Documents/srcs/esp-idf/components/http_parser /home/boony/Documents/srcs/esp-idf/components/idf_test /home/boony/Documents/srcs/esp-idf/components/ieee802154 /home/boony/Documents/srcs/esp-idf/components/json /home/boony/Documents/srcs/esp-idf/components/log /home/boony/Documents/srcs/esp-idf/components/lwip /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/main /home/boony/Documents/srcs/esp-idf/components/mbedtls /home/boony/Documents/srcs/esp-idf/components/mqtt /home/boony/Documents/srcs/esp-idf/components/newlib /home/boony/Documents/srcs/esp-idf/components/nvs_flash /home/boony/Documents/srcs/esp-idf/components/nvs_sec_provider /home/boony/Documents/srcs/esp-idf/components/openthread /home/boony/Documents/srcs/esp-idf/components/partition_table /home/boony/Documents/srcs/esp-idf/components/perfmon /home/boony/Documents/srcs/esp-idf/components/protobuf-c /home/boony/Documents/srcs/esp-idf/components/protocomm /home/boony/Documents/srcs/esp-idf/components/pthread /home/boony/Documents/srcs/esp-idf/components/sdmmc /home/boony/Documents/srcs/esp-idf/components/soc /home/boony/Documents/srcs/esp-idf/components/spi_flash /home/boony/Documents/srcs/esp-idf/components/spiffs /home/boony/Documents/srcs/esp-idf/components/tcp_transport /home/boony/Documents/srcs/esp-idf/components/ulp /home/boony/Documents/srcs/esp-idf/components/unity /home/boony/Documents/srcs/esp-idf/components/usb /home/boony/Documents/srcs/esp-idf/components/vfs /home/boony/Documents/srcs/esp-idf/components/wear_levelling /home/boony/Documents/srcs/esp-idf/components/wifi_provisioning /home/boony/Documents/srcs/esp-idf/components/wpa_supplicant /home/boony/Documents/srcs/esp-idf/components/xtensa
--- Configuring done (316.1s)
+-- Configuring done (6.7s)
 -- Generating done (0.6s)
 -- Build files have been written to: /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build

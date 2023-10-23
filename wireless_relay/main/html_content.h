@@ -13,9 +13,6 @@ string HTML_CONTENT = R"(
 
 
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,6 +51,25 @@ string HTML_CONTENT = R"(
         background: #c9c9c5;
         color: #0d363f;
         font-size: 1.1em;
+        font-family: monospace;
+    }
+
+    
+    .processing
+    {
+        background-color: lightgray !important;
+    }
+
+    .maxi_button
+    {
+        margin: 10px;
+        min-height: 223px;
+        min-width: 320px;
+        padding: 8px;
+        background: #33b5af;
+        border: solid 1px #141504;
+        color: #152e45;
+        font-size: 10.31em;
         font-family: monospace;
     }
 
@@ -104,8 +120,7 @@ string HTML_CONTENT = R"(
     <h4 onclick="loadSample(this);">{{TITLE}}</h4>    
     <section action="{{POST_URI}}" method="post">     
        <div class="buttons">
-        <button class="btn-primary" onclick="turnOn(this);">ON</button>
-        <button class="btn-danger" onclick="restart(this);">Restart</button>
+        <button class="btn-primary maxi_button" onclick="turnOn(this);">ON</button>
        </div>
          
             <textarea id="response">response here</textarea> <br/>
@@ -118,7 +133,7 @@ string HTML_CONTENT = R"(
     <script>
 
            //2023-08-17 16:58:26 - Send command to server
-        function sendCommand(command_name, value)
+        function sendCommand(command_name, value, onEnd)
         {
                 var url = "/relay";                
                 var payload = value;
@@ -134,7 +149,12 @@ string HTML_CONTENT = R"(
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
-                        onResponse( xhttp.responseText );                       
+                        onResponse( xhttp.responseText );                 
+                    }
+                    //2023-10-22 22:02:13
+                    if(onEnd)
+                    {
+                        onEnd(xhttp.responseText);
                     }
                 };          
             xhttp.open("POST", url, true);
@@ -148,15 +168,29 @@ string HTML_CONTENT = R"(
                 sendCommand("data",area.value);
         }//saveConfig
 
-        function turnOn()
+        function turnOn(sender)
         {                              
-                sendCommand("data","ON");
+            com = "ON";
+            if(sender)
+            {
+                sender.classList.add("processing");
+            }
+                sendCommand("data",com,function(){
+                sender.classList.remove("processing");
+            });
         }//saveConfig
 
 
-        function turnOff()
-        {                              
-                sendCommand("data","OFF");
+        function turnOff(sender)
+        {               
+            com = "OFF";
+            if(sender)
+            {
+                sender.classList.add("processing");
+            }
+                sendCommand("data",com,function(){
+                sender.classList.remove("processing");
+            });
         }//saveConfig
 
 
@@ -183,9 +217,6 @@ string HTML_CONTENT = R"(
 
 </body>
 </html>
-
-
-
 
 
 

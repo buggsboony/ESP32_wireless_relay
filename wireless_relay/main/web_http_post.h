@@ -302,7 +302,7 @@ esp_err_t get_handler(httpd_req_t *req)
     }
 
     map <string,string> server_side_vars;
-    server_side_vars["{{TITLE}}"] = "ESPeed Web Server HTTP <em class=\"info\">(click here to load example)</em>";
+    server_side_vars["{{TITLE}}"] = "ESP32 Relay Web Server HTTP";
     server_side_vars["{{POST_URI}}"] = "/relay";// full uri not working : "/"+serverIP + "/relay"
 
     //2023-08-16 17:16:44 - Browse map to replace variable with there content :

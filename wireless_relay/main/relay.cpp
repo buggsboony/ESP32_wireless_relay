@@ -11,6 +11,7 @@
 #include "esp_event.h"
 #include "nvs_flash.h"
 #include "esp_h/esp_iotools.h" //2023-08-16 17:25:12 - to use functions : replaceStr()
+#include "driver/gpio.h" //gpio stuffs
 
 
 
@@ -30,7 +31,11 @@
 static const char *TAG = "Test Wifi";
 static bool demandeConnexion = false;
 
-
+//const gpio_num_t relayPin = GPIO_NUM_2; //GPIO_NUM_2 is Built in LED
+const gpio_num_t relayPin = GPIO_NUM_27; //Relay is connected to PIN 27
+#define PIN_LOW 1
+#define PIN_HIGH 0  //This is inverted for Built in LED
+short s_relay_state = PIN_LOW;
 
 //2023-08-01 01:27:04 - Pattern buzzer
 typedef struct gpio_job_params
@@ -42,10 +47,39 @@ typedef struct gpio_job_params
 //2023-10-22 21:18:44 - Task code
 void gpio_job(void *pvParameters) 
 {
-puts("task_example waits...\n");
-vTaskDelay(5000 / portTICK_PERIOD_MS);
-puts("Task exit");
-vTaskDelete(NULL);
+    int waitTime = 600; //HIGH state time.
+    ESP_LOGI(TAG, "PIN is %d!", (int) relayPin);
+    ESP_LOGI(TAG, "Turning the LED ON");
+
+
+    // Configuration de la broche GPIO en mode sortie
+    gpio_config_t io_conf;
+    io_conf.intr_type = GPIO_INTR_DISABLE;
+    io_conf.mode = GPIO_MODE_OUTPUT;
+    io_conf.pin_bit_mask = (1ULL << relayPin);
+    io_conf.pull_down_en = GPIO_PULLDOWN_DISABLE;
+    io_conf.pull_up_en = GPIO_PULLUP_DISABLE;
+    gpio_config(&io_conf);
+
+
+    // Built in LED 1 for ON and 0 for Down, this is inverted 
+    s_relay_state = PIN_HIGH; //ON
+    gpio_set_level(relayPin, s_relay_state);
+
+
+    // Vous pouvez également éteindre la LED en utilisant gpio_set_level(relayPin, 0);
+
+
+    ESP_LOGI(TAG, "waitTime = %d ", waitTime);
+    vTaskDelay(waitTime / portTICK_PERIOD_MS);
+
+    // Éteindre la LED
+    s_relay_state = PIN_LOW;
+    gpio_set_level(relayPin, s_relay_state);
+    ESP_LOGI(TAG, "Turning the LED OFF");
+
+    puts("Task exit");
+    vTaskDelete(NULL);
 }//gpio_job
 
   

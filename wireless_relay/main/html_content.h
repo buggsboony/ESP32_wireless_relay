@@ -16,8 +16,6 @@ string HTML_CONTENT = R"(
 
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,6 +61,7 @@ string HTML_CONTENT = R"(
     {
         margin: 10px;
         min-height: 60px;
+        min-width: 120px;
         padding: 8px;       
         background: #33b5af; 
         border:solid 1px #141504;
@@ -105,22 +104,23 @@ string HTML_CONTENT = R"(
     <h4 onclick="loadSample(this);">{{TITLE}}</h4>    
     <section action="{{POST_URI}}" method="post">     
        <div class="buttons">
-           <button  class="btn-primary" onclick="saveConfig(this);">Save</button> <button class="btn-danger" onclick="restart(this);">Restart</button>
+        <button class="btn-primary" onclick="turnOn(this);">ON</button>
+        <button class="btn-danger" onclick="restart(this);">Restart</button>
        </div>
-            <textarea id="postdata" name="postdata">{{JSON_CONFIG}}</textarea> <br/>
+         
             <textarea id="response">response here</textarea> <br/>
         <div class="buttons">
-            <button class="btn-primary" onclick="saveConfig(this);">Save</button> <button class="btn-danger" onclick="restart(this);">Restart</button>
+            <button class="btn-primary" onclick="turnOn();">ON</button>
+            <button class="btn-danger" onclick="restart(this);">Restart</button>
         </div>
     </section>
 
     <script>
 
-         
            //2023-08-17 16:58:26 - Send command to server
         function sendCommand(command_name, value)
         {
-                var url = "/config";                
+                var url = "/relay";                
                 var payload = value;
                 //2023-08-17 18:26:22 - response callback
                 var onResponse= function(data)
@@ -148,6 +148,17 @@ string HTML_CONTENT = R"(
                 sendCommand("data",area.value);
         }//saveConfig
 
+        function turnOn()
+        {                              
+                sendCommand("data","ON");
+        }//saveConfig
+
+
+        function turnOff()
+        {                              
+                sendCommand("data","OFF");
+        }//saveConfig
+
 
         //2023-08-30 15:22:29 - Restart command, data is local date time
         function restart()
@@ -168,61 +179,6 @@ string HTML_CONTENT = R"(
             }
         }//loadSample
      
-
-        // Json configuration
-
-        var espeed_alert_sample = 
-        {
-            enter_tone: {freq:700, enable:true}, //tone on enter polygon
-            exit_tone:{freq:500,  enable:true}, //tone on exit polygon
-            alt_prec:4,  //match detection with altitude precision (plus or minus 4m)
-
-            sectors:[
-                {
-                    name:"north",
-                    polygon:
-                    [                          
-                        [4.6323036, -1.00874],//Lat, LNG, Elevation in meters
-                        [4.63306036, -1.008],
-                        [4.63339823, -1.00],
-                        [4.6351853, -1.0091]                                              
-                    ]
-                },
-                {
-                    name:"south",
-                    polygon:
-                    [                          
-                        [4.323036, -1.0874],//Lat, LNG, Elevation in meters
-                        [4.3306036, -1.08],
-                        [4.3339823, -1.0],
-                        [4.351853, -1.091]                                              
-                    ]
-                }
-            ],
-
-
-
-            areas : [ 
-                        {
-                            sector:"north",
-                            name:"Road 1",
-                            polygon:
-                            [                          
-                                [4.6323036, -1.00874, 32],//Lat, LNG, Elevation in meters
-                                [4.63306036, -1.008],
-                                [4.63339823, -1.00],
-                                [4.6351853, -1.0091],
-                                [4.6360584, -1.0082,15 ] 
-                                [4.63066867, -1.00113]                                
-                            ],
-                            exit_tone:{enable:false}, //overload config for this area only
-                        }
-            ]
-
-        }//default
-
-
-
     </script>
 
 </body>

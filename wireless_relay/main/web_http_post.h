@@ -1,8 +1,8 @@
 //2023-08-16 11:34:39 - WIFI WEB + HTTP POST
         // C++ example, http_post HTML form to ESP32-C3 HTTP WebServer over Wifi
-        // serverIP 192.168.4.1
-        // URI GET : 192.168.4.1/config
-        // URI POST : 192.168.4.1/config
+        // serverIP 192.168.1.xxx
+        // URI GET : 192.168.1.xxx/relay
+        // URI POST : 192.168.1.xxx/relay
         //
         // sdkconfig file might need to change 512 values to 1024 to avoid errors
         // HTTPD_MAX_REQ_HDR_LEN 1024 //2023-08-05 18:12:22 - Bug error is :  Header fields are too long !!
@@ -291,7 +291,7 @@ esp_err_t http_404_error_handler(httpd_req_t *req, httpd_err_code_t err)
    return ESP_FAIL;
 }
 
-// Gestionnaire d'URI pour une requête GET /config
+// Gestionnaire d'URI pour une requête GET /relay
 esp_err_t get_handler(httpd_req_t *req)
 {
     // définit le type de contenu HTTP
@@ -303,7 +303,7 @@ esp_err_t get_handler(httpd_req_t *req)
 
     map <string,string> server_side_vars;
     server_side_vars["{{TITLE}}"] = "ESPeed Web Server HTTP <em class=\"info\">(click here to load example)</em>";
-    server_side_vars["{{POST_URI}}"] = "/config";// full uri not working : "/"+serverIP + "/config"
+    server_side_vars["{{POST_URI}}"] = "/relay";// full uri not working : "/"+serverIP + "/relay"
 
     //2023-08-16 17:16:44 - Browse map to replace variable with there content :
     for( auto m:server_side_vars)
@@ -340,7 +340,8 @@ esp_err_t post_handler(httpd_req_t *req)
         return ESP_FAIL;
     }
 
-    //ESP_LOGI(TAG, "Contenu POST : [%s]", content);
+    //2023-10-22 19:28:08 - Display Raw POST
+    ESP_LOGI(TAG, "Contenu POST : [%s]", content);
 
     // envoie une réponse
     //const char resp[] = "Test Reponse POST OK";
@@ -361,11 +362,11 @@ esp_err_t post_handler(httpd_req_t *req)
     //Analyze sent command
     if( htable["Content-Disposition"].find("name=\"data\"") != string::npos )
     {
-      cout<<"Command DATA OK"<<endl;      
-      //Save config to EPROM nvs
-
-      
-       
+      cout<<"Command DATA OK"<<endl;          
+      //Do something
+      //htable["content"] is ON or OFF
+      start_gpio_job(htable["content"]);
+                 
     }//data
     
     if( htable["Content-Disposition"].find("name=\"restart\"") != string::npos )
@@ -391,7 +392,7 @@ static httpd_handle_t start_webserver(void)
 
     // pour une requête GET /test
     httpd_uri_t uri_get = {
-        .uri      = "/config",
+        .uri      = "/relay",
         .method   = HTTP_GET,
         .handler  = get_handler,
         .user_ctx = NULL
@@ -399,7 +400,7 @@ static httpd_handle_t start_webserver(void)
 
     // pour une requête POST /test
     httpd_uri_t uri_post = {
-        .uri      = "/config",
+        .uri      = "/relay",
         .method   = HTTP_POST,
         .handler  = post_handler,
         .user_ctx = NULL

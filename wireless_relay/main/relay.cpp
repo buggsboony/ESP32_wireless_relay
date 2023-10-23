@@ -31,6 +31,36 @@ static const char *TAG = "Test Wifi";
 static bool demandeConnexion = false;
 
 
+
+//2023-08-01 01:27:04 - Pattern buzzer
+typedef struct gpio_job_params
+{
+    bool state;
+    gpio_job_params():state(0){}
+}gpio_job_params;
+
+//2023-10-22 21:18:44 - Task code
+void gpio_job(void *pvParameters) 
+{
+puts("task_example waits...\n");
+vTaskDelay(5000 / portTICK_PERIOD_MS);
+puts("Task exit");
+vTaskDelete(NULL);
+}//gpio_job
+
+  
+//2023-10-22 19:32:19 - RelayTask, GPIO JOB
+void start_gpio_job(string on_off, short duration=1000)
+{
+    gpio_job_params params;
+    params.state=0;
+    if(on_off=="ON"){ params.state = 1; 
+    }
+    xTaskCreate(gpio_job, "gpio_job", 2048, &params, 5, NULL);
+}//start_gpio_job
+
+
+
 //---------------------- Web server Vars 
 #include "web_http_post.h"
 static httpd_handle_t server = NULL;
@@ -182,12 +212,12 @@ extern "C" void app_main()
     {
         if(scan_wifi())
         {
-            connect_wifi();
+            connect_wifi(); //EventHandler Will Start Web Serveur ON IP allocated
         }
     }
 
-    //2023-10-22 18:17:44 - Web Server Task
-    webTask(NULL); //Force config task manually for tests
+
+
 
 
 

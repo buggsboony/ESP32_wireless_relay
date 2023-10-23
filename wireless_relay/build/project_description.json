@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "blink",
-    "project_version":    "1163f8f-dirty",
+    "project_version":    "0877d2b-dirty",
     "project_path":       "/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay",
     "idf_path":           "/home/boony/Documents/srcs/esp-idf",
     "build_dir":          "/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build",

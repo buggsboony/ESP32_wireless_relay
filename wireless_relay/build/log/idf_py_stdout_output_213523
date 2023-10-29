@@ -1,0 +1,90 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader/esp-idf/esptool_py && /home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/boony/Documents/srcs/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader/bootloader.bin
+Bootloader binary size 0x6900 bytes. 0x700 bytes (6%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/relay.cpp.obj
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable blink.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev2
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Generated /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/blink.bin
+[9/10] cd /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esptool_py && /home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/boony/Documents/srcs/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/partition_table/partition-table.bin /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/blink.bin
+blink.bin binary size 0x10ca90 bytes. Smallest app partition is 0x200000 bytes. 0xf3570 bytes (48%) free.
+[9/10] cd /home/boony/Documents/srcs/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/boony/Documents/srcs/esp-idf -D "SERIAL_TOOL=/home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/boony/Documents/srcs/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build -P /home/boony/Documents/srcs/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 blink.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev2
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WDQ6 (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 80:7d:3a:fc:86:b0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0011cfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26880 bytes to 16864...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076a5... (100 %)
+Wrote 26880 bytes (16864 compressed) at 0x00001000 in 0.8 seconds (effective 260.1 kbit/s)...
+Hash of data verified.
+Compressed 1100432 bytes to 647564...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001c4b8... (5 %)
+Writing at 0x00026f7c... (7 %)
+Writing at 0x0002ce3a... (10 %)
+Writing at 0x00033a05... (12 %)
+Writing at 0x00045634... (15 %)
+Writing at 0x0004fd3d... (17 %)
+Writing at 0x00055739... (20 %)
+Writing at 0x0005b2e3... (22 %)
+Writing at 0x00060e00... (25 %)
+Writing at 0x00066a3a... (27 %)
+Writing at 0x0006c6bb... (30 %)
+Writing at 0x000719b8... (32 %)
+Writing at 0x00076d10... (35 %)
+Writing at 0x0007c1eb... (37 %)
+Writing at 0x000814fb... (40 %)
+Writing at 0x00086bbd... (42 %)
+Writing at 0x0008c4eb... (45 %)
+Writing at 0x000925bc... (47 %)
+Writing at 0x00097acc... (50 %)
+Writing at 0x0009d225... (52 %)
+Writing at 0x000a2a0f... (55 %)
+Writing at 0x000a8241... (57 %)
+Writing at 0x000ad8d6... (60 %)
+Writing at 0x000b3406... (62 %)
+Writing at 0x000b960b... (65 %)
+Writing at 0x000bf1aa... (67 %)
+Writing at 0x000c63b5... (70 %)
+Writing at 0x000cf14c... (72 %)
+Writing at 0x000d6c5b... (75 %)
+Writing at 0x000df2f9... (77 %)
+Writing at 0x000e4bcf... (80 %)
+Writing at 0x000ea988... (82 %)
+Writing at 0x000f3298... (85 %)
+Writing at 0x000f99b2... (87 %)
+Writing at 0x001021b6... (90 %)
+Writing at 0x00108f5c... (92 %)
+Writing at 0x0010eba4... (95 %)
+Writing at 0x00114913... (97 %)
+Writing at 0x00119b10... (100 %)
+Wrote 1100432 bytes (647564 compressed) at 0x00010000 in 16.0 seconds (effective 548.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 104...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (104 compressed) at 0x00008000 in 0.1 seconds (effective 407.4 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

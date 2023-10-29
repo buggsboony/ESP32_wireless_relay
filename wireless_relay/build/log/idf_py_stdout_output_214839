@@ -1,0 +1,150 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15696
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3944
+entry 0x4008065c
+[0;32mI (30) boot: ESP-IDF v5.2-dev-3318-g8fc8f3f479 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Oct 22 2023 18:53:50[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v1.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00005000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000e000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3869ch (231068) map[0m
+[0;32mI (189) esp_image: segment 1: paddr=000486c4 vaddr=3ffb0000 size=03ba8h ( 15272) load[0m
+[0;32mI (195) esp_image: segment 2: paddr=0004c274 vaddr=40080000 size=03da4h ( 15780) load[0m
+[0;32mI (202) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=bab38h (764728) map[0m
+[0;32mI (479) esp_image: segment 4: paddr=0010ab60 vaddr=40083da4 size=11f00h ( 73472) load[0m
+[0;32mI (521) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (521) boot: Disabling RNG early entropy source...[0m
+[0;32mI (532) cpu_start: Multicore app[0m
+[0;32mI (541) cpu_start: Pro cpu start user code[0m
+[0;32mI (541) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (541) cpu_start: Application information:[0m
+[0;32mI (544) cpu_start: Project name:     blink[0m
+[0;32mI (549) cpu_start: App version:      b57b767-dirty[0m
+[0;32mI (554) cpu_start: Compile time:     Oct 29 2023 11:32:32[0m
+[0;32mI (560) cpu_start: ELF file SHA256:  6e362d47a...[0m
+[0;32mI (566) cpu_start: ESP-IDF:          v5.2-dev-3318-g8fc8f3f479[0m
+[0;32mI (572) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (577) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (582) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (587) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (594) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (600) heap_init: At 3FFB92C8 len 00026D38 (155 KiB): DRAM[0m
+[0;32mI (606) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (612) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (619) heap_init: At 40095CA4 len 0000A35C (40 KiB): IRAM[0m
+[0;32mI (627) spi_flash: detected chip: generic[0m
+[0;32mI (630) spi_flash: flash io: dio[0m
+[0;32mI (638) main_task: Started on CPU0[0m
+[0;32mI (648) main_task: Calling app_main()[0m
+I (688) wifi:wifi driver task: 3ffc2988, prio:23, stack:6656, core=0
+I (698) wifi:wifi firmware version: dc6ffb6
+I (698) wifi:wifi certification version: v7.0
+I (698) wifi:config NVS flash: enabled
+I (698) wifi:config nano formating: disabled
+I (708) wifi:Init data frame dynamic rx buffer num: 32
+I (708) wifi:Init static rx mgmt buffer num: 5
+I (718) wifi:Init management short buffer num: 32
+I (718) wifi:Init dynamic tx buffer num: 32
+I (728) wifi:Init static rx buffer size: 1600
+I (728) wifi:Init static rx buffer num: 10
+I (728) wifi:Init dynamic rx buffer num: 32
+[0;32mI (738) wifi_init: rx ba win: 6[0m
+[0;32mI (738) wifi_init: tcpip mbox: 32[0m
+[0;32mI (748) wifi_init: udp mbox: 6[0m
+[0;32mI (748) wifi_init: tcp mbox: 6[0m
+[0;32mI (748) wifi_init: tcp tx win: 5744[0m
+[0;32mI (758) wifi_init: tcp rx win: 5744[0m
+[0;32mI (758) wifi_init: tcp mss: 1440[0m
+[0;32mI (768) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (768) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (778) phy_init: phy_version 4780,16b31a7,Sep 22 2023,20:42:16[0m
+I (858) wifi:mode : sta (80:7d:3a:fc:86:b0)
+I (858) wifi:enable tsf
+[0;32mI (3358) Test Wifi: Nb reseaux trouves = 3[0m
+[0;32mI (3358) Test Wifi: SSID 		boonworld[0m
+[0;32mI (3358) Test Wifi: RSSI 		-83[0m
+[0;32mI (3358) Test Wifi: Channel 		1
+[0m
+[0;32mI (3358) Test Wifi: SSID 		SFR-72a8[0m
+[0;32mI (3368) Test Wifi: RSSI 		-88[0m
+[0;32mI (3368) Test Wifi: Channel 		1
+[0m
+[0;32mI (3368) Test Wifi: SSID 		CANALBOX-DD1E97[0m
+[0;32mI (3378) Test Wifi: RSSI 		-88[0m
+[0;32mI (3378) Test Wifi: Channel 		11
+[0m
+E (3388) wifi:NAN WiFi stop
+I (3388) wifi:flush txq
+I (3388) wifi:stop sw txq
+I (3388) wifi:lmac stop hw txq
+I (3398) wifi:mode : sta (80:7d:3a:fc:86:b0)
+I (3398) wifi:enable tsf
+[0;32mI (3408) Test Wifi: Connexion ...[0m
+I (3418) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3418) wifi:state: init -> auth (b0)
+I (3428) wifi:state: auth -> assoc (0)
+I (3438) wifi:state: assoc -> run (10)
+I (3458) wifi:connected with CANALBOX-DD1E97, aid = 27, channel 11, BW20, bssid = 64:fd:96:dd:1e:94
+I (3468) wifi:security: WPA2-PSK, phy: bgn, rssi: -89
+I (3468) wifi:pm start, type: 1
+
+I (3488) wifi:<ba-add>idx:0 (ifx:0, 64:fd:96:dd:1e:94), tid:7, ssn:1, winSize:64
+I (3528) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4478) esp_netif_handlers: sta ip: 192.168.1.132, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4478) Test Wifi: Adresse IP : 192.168.1.132[0m
+[0;32mI (4478) Test Wifi: Starting webserver[0m
+[0;32mI (4488) Test Wifi: Starting server on port: '80'[0m
+[0;32mI (4488) Test Wifi: Registering URI handlers[0m
+[0;32mI (11398) main_task: Returned from app_main()[0m
+I (19408) wifi:<ba-add>idx:1 (ifx:0, 64:fd:96:dd:1e:94), tid:0, ssn:1, winSize:64
+[0;33mW (25238) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (25238) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (26268) Test Wifi: Longueur contenu POST : 137[0m
+[0;32mI (26268) Test Wifi: Contenu POST : [------WebKitFormBoundarywFhFzyP1whY3otsR
+Content-Disposition: form-data; name="data"
+
+ON
+------WebKitFormBoundarywFhFzyP1whY3otsR--
+�@l��?���?][0m
+Content Disposition Found !!
+Command DATA OK
+[0;32mI (26288) Test Wifi: PIN is 27![0m
+[0;32mI (26298) Test Wifi: Turning the LED ON[0m
+[0;32mI (26298) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (26308) Test Wifi: waitTime = 600 [0m
+[0;32mI (26908) Test Wifi: Turning the LED OFF[0m
+Task exit
+[0;33mW (431208) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (431218) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (491188) Test Wifi: Longueur contenu POST : 137[0m
+[0;32mI (491188) Test Wifi: Contenu POST : [------WebKitFormBoundaryPc7riPNvAKXCs5GI
+Content-Disposition: form-data; name="data"
+
+ON
+------WebKitFormBoundaryPc7riPNvAKXCs5GI--
+�@l��?���?][0m
+Content Disposition Found !!
+Command DATA OK
+[0;32mI (491208) Test Wifi: PIN is 27![0m
+[0;32mI (491208) Test Wifi: Turning the LED ON[0m
+[0;32mI (491218) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (491228) Test Wifi: waitTime = 600 [0m
+[0;32mI (491828) Test Wifi: Turning the LED OFF[0m
+Task exit

@@ -8,9 +8,6 @@ using namespace std;
 string HTML_CONTENT = R"(
 
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -166,7 +163,7 @@ string HTML_CONTENT = R"(
 
         function turnOn(sender)
         {                              
-            com = "ON";
+            var com = "ON";
             if(sender)
             {                
                 sender.innerText="⏳";
@@ -174,22 +171,26 @@ string HTML_CONTENT = R"(
             }
                 sendCommand("data",com,function(){
                     setTimeout(() => {
-                           sender.innerText="ON";
+                           sender.innerText=com;
                            //sender.style.background="#33b5af";
-                    }, 300);             
+                    }, 700);             
             });
         }//saveConfig
 
 
         function turnOff(sender)
         {               
-            com = "OFF";
+            var com = "OFF";
             if(sender)
-            {
-                sender.classList.add("processing");
+            {                
+                sender.innerText="⏳";
+                //sender.style.background="gold";
             }
                 sendCommand("data",com,function(){
-                sender.classList.remove("processing");
+                    setTimeout(() => {
+                           sender.innerText=com;
+                           //sender.style.background="#33b5af";
+                    }, 700);             
             });
         }//saveConfig
 
@@ -217,26 +218,6 @@ string HTML_CONTENT = R"(
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

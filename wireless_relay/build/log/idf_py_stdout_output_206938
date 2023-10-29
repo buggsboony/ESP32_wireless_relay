@@ -1,0 +1,17 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader/esp-idf/esptool_py && /home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/boony/Documents/srcs/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader/bootloader.bin
+Bootloader binary size 0x6900 bytes. 0x700 bytes (6%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/relay.cpp.obj
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable blink.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.7.dev2
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Generated /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/blink.bin
+[9/9] cd /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esptool_py && /home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/boony/Documents/srcs/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/partition_table/partition-table.bin /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/blink.bin
+blink.bin binary size 0x10cac0 bytes. Smallest app partition is 0x200000 bytes. 0xf3540 bytes (48%) free.

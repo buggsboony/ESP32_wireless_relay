@@ -390,21 +390,22 @@ static httpd_handle_t start_webserver(void)
    httpd_config_t config = HTTPD_DEFAULT_CONFIG();
    config.lru_purge_enable = true;
 
-    // pour une requête GET /test
-    httpd_uri_t uri_get = {
-        .uri      = "/relay",
-        .method   = HTTP_GET,
-        .handler  = get_handler,
-        .user_ctx = NULL
-    };
+    // pour une requête GET /test    
+    httpd_uri_t uri_get;
+    memset(&uri_get,0,sizeof(httpd_uri_t));
+    uri_get.uri      = "/relay";
+    uri_get.method   = HTTP_GET;
+    uri_get.handler  = get_handler;
+    uri_get.user_ctx = NULL;    
 
     // pour une requête POST /test
-    httpd_uri_t uri_post = {
-        .uri      = "/relay",
-        .method   = HTTP_POST,
-        .handler  = post_handler,
-        .user_ctx = NULL
-    };
+    httpd_uri_t uri_post;
+    memset(&uri_post,0, sizeof(httpd_uri_t) );    
+    uri_post.uri      = "/relay";
+    uri_post.method   = HTTP_POST;
+    uri_post.handler  = post_handler;
+    uri_post.user_ctx = NULL;
+  
 
    // Start the httpd server
    ESP_LOGI(TAG, "Starting server on port: '%d'", config.server_port);

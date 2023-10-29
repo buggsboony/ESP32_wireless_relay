@@ -198,17 +198,36 @@ static void restart_wifi()
 static void connect_wifi()
 {
     // configure la connexion Wifi du point d'accès (AP)
-    wifi_config_t wifi_config = {
-        .sta = {
-        .ssid = ESP_WIFI_SSID,
-        .password = ESP_WIFI_PASSWORD,
-        //.threshold.authmode = WIFI_AUTH_WPA2_PSK,
-        .pmf_cfg = {
-            .capable = true,
-            .required = false
-            },
-        },
-    };    
+    // wifi_config_t wifi_config = {
+    //     .sta = {
+    //     .ssid = ESP_WIFI_SSID,
+    //     .password = ESP_WIFI_PASSWORD,
+    //     //.threshold.authmode = WIFI_AUTH_WPA2_PSK,
+    //     .pmf_cfg = {
+    //         .capable = true,
+    //         .required = false
+    //         },
+    //     },
+    // };    
+    
+
+    wifi_pmf_config_t pmf_cfg;
+    memset(&pmf_cfg,0,sizeof(wifi_pmf_config_t) );
+    pmf_cfg.capable = true;
+    pmf_cfg.required = false;
+
+    wifi_sta_config_t sta_cfg;
+    memset(&sta_cfg,0,sizeof(wifi_sta_config_t) );
+
+    wifi_config_t wifi_config;
+    memset(&wifi_config,0,sizeof(wifi_config_t) );        
+    //2023-10-29 11:03:44 - Must use strncpy to copy array content in byte array.
+    strncpy((char*)sta_cfg.ssid, ESP_WIFI_SSID, sizeof(sta_cfg.ssid));    
+    strncpy((char*)sta_cfg.password, ESP_WIFI_PASSWORD, sizeof(sta_cfg.password));
+    //sta_cfg.threshold.authmode = WIFI_AUTH_WPA2_PSK;
+    sta_cfg.pmf_cfg = pmf_cfg;
+    wifi_config.sta = sta_cfg;
+
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config)); //ESP_IF_WIFI_STA not working
     demandeConnexion = true;
     restart_wifi();

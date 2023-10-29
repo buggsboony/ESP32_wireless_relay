@@ -11,8 +11,6 @@ string HTML_CONTENT = R"(
 
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,11 +53,6 @@ string HTML_CONTENT = R"(
     }
 
     
-    .processing
-    {
-        background-color: lightgray !important;
-    }
-
     .maxi_button
     {
         margin: 10px;
@@ -79,13 +72,16 @@ string HTML_CONTENT = R"(
         min-height: 60px;
         min-width: 120px;
         padding: 8px;       
-        background: #33b5af; 
+        
         border:solid 1px #141504;
         color: #141504;
         font-size: 1.31em;
         font-family: monospace;
     }
-
+/*     
+    button:hover {
+  background-color: bisque;
+} */
     form{
         display: flex;
         align-content: stretch;
@@ -97,7 +93,7 @@ string HTML_CONTENT = R"(
 
     .btn-primary
     {
-        background:#3d8b4a;
+        background: #33b5af; 
     }
     .btn-danger
     {
@@ -120,7 +116,7 @@ string HTML_CONTENT = R"(
     <h4 onclick="loadSample(this);">{{TITLE}}</h4>    
     <section action="{{POST_URI}}" method="post">     
        <div class="buttons">
-        <button class="btn-primary maxi_button" onclick="turnOn(this);">ON</button>
+        <button class="btn-primary maxi_button" onclick="turnOn(this);">ON</button>        
        </div>
          
             <textarea id="response">response here</textarea> <br/>
@@ -172,11 +168,15 @@ string HTML_CONTENT = R"(
         {                              
             com = "ON";
             if(sender)
-            {
-                sender.classList.add("processing");
+            {                
+                sender.innerText="⏳";
+                //sender.style.background="gold";
             }
                 sendCommand("data",com,function(){
-                sender.classList.remove("processing");
+                    setTimeout(() => {
+                           sender.innerText="ON";
+                           //sender.style.background="#33b5af";
+                    }, 300);             
             });
         }//saveConfig
 
@@ -217,7 +217,6 @@ string HTML_CONTENT = R"(
 
 </body>
 </html>
-
 
 
 

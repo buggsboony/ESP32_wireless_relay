@@ -40,11 +40,6 @@
     }
 
     
-    .processing
-    {
-        background-color: lightgray !important;
-    }
-
     .maxi_button
     {
         margin: 10px;
@@ -64,16 +59,16 @@
         min-height: 60px;
         min-width: 120px;
         padding: 8px;       
-        background: #33b5af; 
+        
         border:solid 1px #141504;
         color: #141504;
         font-size: 1.31em;
         font-family: monospace;
     }
-    
+/*     
     button:hover {
   background-color: bisque;
-}
+} */
     form{
         display: flex;
         align-content: stretch;
@@ -85,7 +80,7 @@
 
     .btn-primary
     {
-        background:#3d8b4a;
+        background: #33b5af; 
     }
     .btn-danger
     {
@@ -160,11 +155,15 @@
         {                              
             com = "ON";
             if(sender)
-            {
-                sender.classList.add("processing");
+            {                
+                sender.innerText="⏳";
+                //sender.style.background="gold";
             }
                 sendCommand("data",com,function(){
-                sender.classList.remove("processing");
+                    setTimeout(() => {
+                           sender.innerText="ON";
+                           //sender.style.background="#33b5af";
+                    }, 300);             
             });
         }//saveConfig
 

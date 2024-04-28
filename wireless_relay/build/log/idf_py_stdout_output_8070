@@ -1,0 +1,122 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15696
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3944
+entry 0x4008065c
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3318-g8fc8f3f479 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 22 2023 18:53:50[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00005000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000e000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=386cch (231116) map[0m
+[0;32mI (189) esp_image: segment 1: paddr=000486f4 vaddr=3ffb0000 size=03ba8h ( 15272) load[0m
+[0;32mI (196) esp_image: segment 2: paddr=0004c2a4 vaddr=40080000 size=03d74h ( 15732) load[0m
+[0;32mI (202) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=bab7ch (764796) map[0m
+[0;32mI (480) esp_image: segment 4: paddr=0010aba4 vaddr=40083d74 size=11f30h ( 73520) load[0m
+[0;32mI (521) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (522) boot: Disabling RNG early entropy source...[0m
+[0;32mI (533) cpu_start: Multicore app[0m
+[0;32mI (542) cpu_start: Pro cpu start user code[0m
+[0;32mI (542) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (542) cpu_start: Application information:[0m
+[0;32mI (545) cpu_start: Project name:     blink[0m
+[0;32mI (550) cpu_start: App version:      bb1ee55-dirty[0m
+[0;32mI (555) cpu_start: Compile time:     Apr 28 2024 16:37:50[0m
+[0;32mI (561) cpu_start: ELF file SHA256:  ada14094d...[0m
+[0;32mI (567) cpu_start: ESP-IDF:          v5.2-dev-3318-g8fc8f3f479[0m
+[0;32mI (573) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (578) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (583) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (588) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (595) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (601) heap_init: At 3FFB92D8 len 00026D28 (155 KiB): DRAM[0m
+[0;32mI (607) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (613) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (620) heap_init: At 40095CA4 len 0000A35C (40 KiB): IRAM[0m
+[0;32mI (628) spi_flash: detected chip: generic[0m
+[0;32mI (631) spi_flash: flash io: dio[0m
+[0;32mI (639) main_task: Started on CPU0[0m
+[0;32mI (649) main_task: Calling app_main()[0m
+I (709) wifi:wifi driver task: 3ffc2a1c, prio:23, stack:6656, core=0
+I (729) wifi:wifi firmware version: dc6ffb6
+I (739) wifi:wifi certification version: v7.0
+I (739) wifi:config NVS flash: enabled
+I (739) wifi:config nano formating: disabled
+I (739) wifi:Init data frame dynamic rx buffer num: 32
+I (739) wifi:Init static rx mgmt buffer num: 5
+I (749) wifi:Init management short buffer num: 32
+I (749) wifi:Init dynamic tx buffer num: 32
+I (759) wifi:Init static rx buffer size: 1600
+I (759) wifi:Init static rx buffer num: 10
+I (759) wifi:Init dynamic rx buffer num: 32
+[0;32mI (769) wifi_init: rx ba win: 6[0m
+[0;32mI (769) wifi_init: tcpip mbox: 32[0m
+[0;32mI (779) wifi_init: udp mbox: 6[0m
+[0;32mI (779) wifi_init: tcp mbox: 6[0m
+[0;32mI (779) wifi_init: tcp tx win: 5744[0m
+[0;32mI (789) wifi_init: tcp rx win: 5744[0m
+[0;32mI (789) wifi_init: tcp mss: 1440[0m
+[0;32mI (799) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (799) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (809) phy_init: phy_version 4780,16b31a7,Sep 22 2023,20:42:16[0m
+I (889) wifi:mode : sta (c4:dd:57:9c:dd:84)
+I (889) wifi:enable tsf
+[0;32mI (3399) Test Wifi: Nb reseaux trouves = 5[0m
+[0;32mI (3399) Test Wifi: SSID 		SFR-72a8[0m
+[0;32mI (3399) Test Wifi: RSSI 		-84[0m
+[0;32mI (3399) Test Wifi: Channel 		1
+[0m
+[0;32mI (3399) Test Wifi: SSID 		CANALBOX-DD1E97[0m
+[0;32mI (3409) Test Wifi: RSSI 		-84[0m
+[0;32mI (3409) Test Wifi: Channel 		6
+[0m
+[0;32mI (3419) Test Wifi: SSID 		boonworld[0m
+[0;32mI (3419) Test Wifi: RSSI 		-92[0m
+[0;32mI (3419) Test Wifi: Channel 		1
+[0m
+[0;32mI (3429) Test Wifi: SSID 		Livebox-1490[0m
+[0;32mI (3429) Test Wifi: RSSI 		-92[0m
+[0;32mI (3439) Test Wifi: Channel 		11
+[0m
+[0;32mI (3439) Test Wifi: SSID 		Livebox-22C0[0m
+[0;32mI (3439) Test Wifi: RSSI 		-95[0m
+[0;32mI (3449) Test Wifi: Channel 		1
+[0m
+E (3459) wifi:NAN WiFi stop
+I (3459) wifi:flush txq
+I (3459) wifi:stop sw txq
+I (3459) wifi:lmac stop hw txq
+I (3459) wifi:mode : sta (c4:dd:57:9c:dd:84)
+I (3469) wifi:enable tsf
+[0;32mI (3469) Test Wifi: Connexion ...[0m
+I (3509) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (3509) wifi:state: init -> auth (b0)
+I (3529) wifi:state: auth -> assoc (0)
+I (3549) wifi:state: assoc -> run (10)
+I (3569) wifi:connected with CANALBOX-DD1E97, aid = 17, channel 6, BW20, bssid = 64:fd:96:dd:1e:94
+I (3569) wifi:security: WPA2-PSK, phy: bgn, rssi: -83
+I (3579) wifi:pm start, type: 1
+
+I (3589) wifi:<ba-add>idx:0 (ifx:0, 64:fd:96:dd:1e:94), tid:7, ssn:1, winSize:64
+I (3619) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4589) esp_netif_handlers: sta ip: 192.168.1.218, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4589) Test Wifi: Adresse IP : 192.168.1.218[0m
+[0;32mI (4589) Test Wifi: Starting webserver[0m
+[0;32mI (4599) Test Wifi: Starting server on port: '80'[0m
+[0;32mI (4599) Test Wifi: Registering URI handlers[0m

@@ -56,9 +56,9 @@ string HTML_CONTENT = R"(
         min-height: 223px;
         min-width: 320px;
         padding: 8px;
-        background: #33b5af;
+                background: #eff340;
+    color: #1765c9;
         border: solid 1px #141504;
-        color: #152e45;
         font-size: 10.31em;
         font-family: monospace;
     }
@@ -90,7 +90,8 @@ string HTML_CONTENT = R"(
 
     .btn-primary
     {
-        background: #33b5af; 
+            background: #eff340;
+            color: #1765c9;
     }
     .btn-danger
     {
@@ -107,23 +108,9 @@ string HTML_CONTENT = R"(
     }
 
     </style>
-</head>
 
-<body>    
-    <h4 onclick="loadSample(this);">{{TITLE}}</h4>    
-    <section action="{{POST_URI}}" method="post">     
-       <div class="buttons">
-        <button class="btn-primary maxi_button" onclick="turnOn(this);">ON</button>        
-       </div>
-         
-            <textarea id="response">response here</textarea> <br/>
-        <div class="buttons">
-            <button class="btn-primary" onclick="turnOn();">ON</button>
-            <button class="btn-danger" onclick="restart(this);">Restart</button>
-        </div>
-    </section>
 
-    <script>
+<script>
 
            //2023-08-17 16:58:26 - Send command to server
         function sendCommand(command_name, value, onEnd)
@@ -215,6 +202,25 @@ string HTML_CONTENT = R"(
         }//loadSample
      
     </script>
+
+
+</head>
+
+<body>    
+    <h4 onclick="loadSample(this);">{{TITLE}}</h4>    
+    <section action="{{POST_URI}}" method="post">                   
+        <div class="buttons">
+            <button class="btn-primary" onclick="turnOn();">GO</button>
+            <button class="btn-danger" onclick="restart(this);">Restart</button>
+        </div> 
+         
+            <textarea id="response">response here</textarea> <br/>
+       <div class="buttons">
+        <button class="btn-primary maxi_button" onclick="turnOn(this);">GO</button>        
+       </div>
+    </section>
+
+   
 
 </body>
 </html>

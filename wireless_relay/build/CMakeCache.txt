@@ -399,9 +399,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wire
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=27
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=28
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/usr/bin/cmake
 //Path to cpack program executable.
@@ -564,9 +564,9 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
 C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS:INTERNAL=1
 //Details about finding Git
-FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.41.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.44.0()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python][cfound components: Interpreter ][v3.11.3()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python][cfound components: Interpreter ][v3.11.8()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Have include stddef.h
@@ -587,7 +587,7 @@ _Python3_Compiler_REASON_FAILURE:INTERNAL=
 _Python3_Development_REASON_FAILURE:INTERNAL=
 _Python3_EXECUTABLE:INTERNAL=/home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;3;32;64;;;abi3;/usr/lib/python3.11;/home/boony/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11;/home/boony/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages;/home/boony/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;8;32;64;;;abi3;/usr/lib/python3.11;/home/boony/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11;/home/boony/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages;/home/boony/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=6791197463a9f1d8a5fbbfb9f0bf1bc3
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=

@@ -1,0 +1,96 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader/esp-idf/esptool_py && /home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/boony/Documents/srcs/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader/bootloader.bin
+Bootloader binary size 0x6900 bytes. 0x700 bytes (6%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/relay.cpp.obj
+/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/main/relay.cpp: In function 'void app_main()':
+/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/main/relay.cpp:312:5: warning: missing initializer for member 'esp_timer_create_args_t::arg' [-Wmissing-field-initializers]
+  312 |     };
+      |     ^
+/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/main/relay.cpp:312:5: warning: missing initializer for member 'esp_timer_create_args_t::dispatch_method' [-Wmissing-field-initializers]
+/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/main/relay.cpp:312:5: warning: missing initializer for member 'esp_timer_create_args_t::skip_unhandled_events' [-Wmissing-field-initializers]
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable blink.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev2
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Generated /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/blink.bin
+[9/10] cd /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/esptool_py && /home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/boony/Documents/srcs/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/partition_table/partition-table.bin /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/blink.bin
+blink.bin binary size 0x10cd40 bytes. Smallest app partition is 0x200000 bytes. 0xf32c0 bytes (47%) free.
+[9/10] cd /home/boony/Documents/srcs/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/boony/Documents/srcs/esp-idf -D "SERIAL_TOOL=/home/boony/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/boony/Documents/srcs/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build -P /home/boony/Documents/srcs/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 blink.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev2
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: c4:dd:57:9c:dd:84
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0011cfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26880 bytes to 16864...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076a5... (100 %)
+Wrote 26880 bytes (16864 compressed) at 0x00001000 in 0.8 seconds (effective 263.6 kbit/s)...
+Hash of data verified.
+Compressed 1101120 bytes to 647924...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001c497... (5 %)
+Writing at 0x00027006... (7 %)
+Writing at 0x0002cf57... (10 %)
+Writing at 0x000339f5... (12 %)
+Writing at 0x000455fa... (15 %)
+Writing at 0x0004fe12... (17 %)
+Writing at 0x000557bf... (20 %)
+Writing at 0x0005b338... (22 %)
+Writing at 0x00060e2f... (25 %)
+Writing at 0x00066a71... (27 %)
+Writing at 0x0006c707... (30 %)
+Writing at 0x000719fc... (32 %)
+Writing at 0x00076d78... (35 %)
+Writing at 0x0007c25a... (37 %)
+Writing at 0x00081531... (40 %)
+Writing at 0x00086bfe... (42 %)
+Writing at 0x0008c535... (45 %)
+Writing at 0x000925e5... (47 %)
+Writing at 0x00097b07... (50 %)
+Writing at 0x0009d1eb... (52 %)
+Writing at 0x000a2a5a... (55 %)
+Writing at 0x000a826e... (57 %)
+Writing at 0x000ad8dd... (60 %)
+Writing at 0x000b3441... (62 %)
+Writing at 0x000b962f... (65 %)
+Writing at 0x000bf1e0... (67 %)
+Writing at 0x000c63fb... (70 %)
+Writing at 0x000cf19c... (72 %)
+Writing at 0x000d6ca4... (75 %)
+Writing at 0x000df33b... (77 %)
+Writing at 0x000e4c3e... (80 %)
+Writing at 0x000ea919... (82 %)
+Writing at 0x000f3302... (85 %)
+Writing at 0x000f9937... (87 %)
+Writing at 0x001021d8... (90 %)
+Writing at 0x00108fb2... (92 %)
+Writing at 0x0010ebf2... (95 %)
+Writing at 0x001148f6... (97 %)
+Writing at 0x00119bfb... (100 %)
+Wrote 1101120 bytes (647924 compressed) at 0x00010000 in 16.2 seconds (effective 544.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 104...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (104 compressed) at 0x00008000 in 0.1 seconds (effective 430.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

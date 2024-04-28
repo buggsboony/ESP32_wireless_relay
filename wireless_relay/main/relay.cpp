@@ -16,6 +16,14 @@
 
 
 
+//Timer
+#include <unistd.h>
+#include "esp_timer.h"
+#include "esp_log.h"
+#include "esp_sleep.h"
+// end timer stuff
+ 
+
 
 #include "private.cpp"
 #define ESP_WIFI_SSID      MY_SSID
@@ -36,6 +44,29 @@ const gpio_num_t relayPin = GPIO_NUM_27; //Relay is connected to PIN 27
 #define PIN_LOW 1
 #define PIN_HIGH 0  //This is inverted for Built in LED
 short s_relay_state = PIN_LOW;
+
+
+
+//2024-04-28 16:36:45 - Auto restart declarations 
+
+int MSEC_MULT = 1000;
+int SEC_MULT = 1000 * MSEC_MULT; 
+int MIN_MULT = 60 * SEC_MULT;
+int HOUR_MULT = 60 * MIN_MULT;
+ 
+static void oneshot_timer_callback(void* arg);
+static void oneshot_timer_callback(void* arg)
+{
+    int64_t time_since_boot = esp_timer_get_time();
+    ESP_LOGI(TAG, "One-shot timer called, time since boot: %lld us", time_since_boot);
+    ESP_LOGI(TAG, "esp_restart() !!");     
+    esp_restart();
+}
+
+
+
+
+
 
 //2023-08-01 01:27:04 - Pattern buzzer
 typedef struct gpio_job_params
@@ -270,6 +301,31 @@ void webTask(void *pvParameters)
 
 extern "C" void app_main()
 {
+
+
+    //2024-04-28 16:41:34 - Start restart timer --------------------------------------------------------
+    const esp_timer_create_args_t oneshot_timer_args = {
+            .callback = &oneshot_timer_callback,
+            /* argument specified here will be passed to timer callback function */
+            //.arg = (void*) periodic_timer,
+            .name = "one-shot"
+    };
+    esp_timer_handle_t oneshot_timer;
+    ESP_ERROR_CHECK(esp_timer_create(&oneshot_timer_args, &oneshot_timer));
+
+    /* Start the timers */
+    int delay = 24;
+    ESP_LOGI(TAG,"timer invoke prevu dans %d mins",  delay);
+    ESP_ERROR_CHECK(esp_timer_start_once(oneshot_timer, delay *  HOUR_MULT ));
+    ESP_LOGI(TAG, "Started timer, time since boot: %lld us", esp_timer_get_time());
+    //-------------------------------------------  END RESTART TIMER ------------------------------------------------
+
+
+
+
+
+
+
     // initialize NVS (nécessaire pour le Wifi)
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) 

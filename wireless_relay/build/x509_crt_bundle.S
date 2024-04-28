@@ -1,4 +1,4 @@
-/* * Data converted from /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /run/media/boony/data/boony/documents/dev/IDF_PROJS/ESP32_wireless_relay/wireless_relay/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

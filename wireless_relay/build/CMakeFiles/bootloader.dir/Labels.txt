@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/CMakeFiles/bootloader
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/CMakeFiles/bootloader.rule
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/CMakeFiles/bootloader-complete.rule
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/run/media/boony/data/boony/documents/dev/IDF_PROJS/ESP32_wireless_relay/wireless_relay/build/CMakeFiles/bootloader
+/run/media/boony/data/boony/documents/dev/IDF_PROJS/ESP32_wireless_relay/wireless_relay/build/CMakeFiles/bootloader.rule
+/run/media/boony/data/boony/documents/dev/IDF_PROJS/ESP32_wireless_relay/wireless_relay/build/CMakeFiles/bootloader-complete.rule
+/run/media/boony/data/boony/documents/dev/IDF_PROJS/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/run/media/boony/data/boony/documents/dev/IDF_PROJS/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/run/media/boony/data/boony/documents/dev/IDF_PROJS/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/run/media/boony/data/boony/documents/dev/IDF_PROJS/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/run/media/boony/data/boony/documents/dev/IDF_PROJS/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/run/media/boony/data/boony/documents/dev/IDF_PROJS/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/run/media/boony/data/boony/documents/dev/IDF_PROJS/ESP32_wireless_relay/wireless_relay/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

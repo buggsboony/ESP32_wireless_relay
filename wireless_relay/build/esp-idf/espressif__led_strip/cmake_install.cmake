@@ -1,4 +1,4 @@
-# Install script for directory: /home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/managed_components/espressif__led_strip
+# Install script for directory: /run/media/boony/data/boony/documents/dev/IDF_PROJS/ESP32_wireless_relay/wireless_relay/managed_components/espressif__led_strip
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

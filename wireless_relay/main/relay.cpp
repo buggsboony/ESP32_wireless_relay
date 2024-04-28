@@ -315,7 +315,7 @@ extern "C" void app_main()
 
     /* Start the timers */
     int delay = 24;
-    ESP_LOGI(TAG,"timer invoke prevu dans %d mins",  delay);
+    ESP_LOGI(TAG,"timer invoke prevu dans %d x MULT=%d",  delay,HOUR_MULT);
     ESP_ERROR_CHECK(esp_timer_start_once(oneshot_timer, delay *  HOUR_MULT ));
     ESP_LOGI(TAG, "Started timer, time since boot: %lld us", esp_timer_get_time());
     //-------------------------------------------  END RESTART TIMER ------------------------------------------------

@@ -3,4 +3,4 @@ source "/home/boony/Documents/srcs/esp-idf/components/esp_app_format/Kconfig.pro
 source "/home/boony/Documents/srcs/esp-idf/components/esp_rom/Kconfig.projbuild"
 source "/home/boony/Documents/srcs/esp-idf/components/esptool_py/Kconfig.projbuild"
 source "/home/boony/Documents/srcs/esp-idf/components/partition_table/Kconfig.projbuild"
-source "/home/boony/Documents/dev/IDF_PROJ/ESP32/ESP32_wireless_relay/wireless_relay/main/Kconfig.projbuild"
+source "/run/media/boony/data/boony/documents/dev/IDF_PROJS/ESP32_wireless_relay/wireless_relay/main/Kconfig.projbuild"

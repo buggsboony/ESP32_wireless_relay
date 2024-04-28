@@ -150,7 +150,7 @@ string HTML_CONTENT = R"(
 
         function turnOn(sender)
         {                              
-            var com = "ON";
+            var com = "GO";
             if(sender)
             {                
                 sender.innerText="⏳";
